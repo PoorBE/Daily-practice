@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Father(uname, age) {
+            //这里的this指向父构造函数的对象实例
+            this.uname = uname;
+            this.age = age;
+        }
+        Father.prototype.money = function() {
+            console.log("我爸爸");
+        }
+
+        function Son(uname, age, score) {
+            //构造函数继承
+            Father.call(this, uname, age); //这里的this指向子构造函数的对象实例
+            this.score = score
+        }
+        //原型继承
+        Son.prototype = new Father();
+        //利用对象的形式修改了原型对象，要利用constructor指回原来的原型对象
+        Son.prototype.constructor = Son;
+        var son = new Son("王八蛋", 22, 100);
+        console.log(son);
+        son.money()
+        console.log(Father.prototype.constructor);
+        console.log(Son.prototype.constructor);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const sum = (...arg) => {
+            let total = 0;
+            arg.forEach(item => total += item);
+            return total;
+        }
+        console.log(sum(10, 20));
+        console.log(sum(10, 20, 30));
+
+        let arr = [1, 2, 3];
+        let [a, ...b] = arr; //b会接收剩余参数，不管有没有元素接收，都是数组
+        console.log(a, b);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击发送请求</button>
+    <script>
+      
+        
+        var btn=document.querySelector('#btn')
+        btn.onclick=function(){
+          jsonp({
+              src:'http://localhost:3001/data?callback=fn1'
+          })
+        }
+        //封装jsonp代码，有两个部分
+        function jsonp(options){
+            // 解构赋值
+            const {src}=options
+            window['fn1']=function(data) {
+            console.log(data);
+        }
+
+           
+            // 创建script标签
+			var script = document.createElement('script');
+		    // src是由客户端决定的，所以是动态的
+			script.src = src
+			// 将script标签追加到页面中
+			document.body.appendChild(script);
+			// 为script标签添加onload事件
+			script.onload = function () {
+				// 将body中的script标签删除掉
+				document.body.removeChild(script);
+            }
+        }
+    </script>
+    <!-- <script src="http://localhost:3001/data?callback=fn"></script> -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证邮箱地址是否已经注册</title>
+	<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+		p:not(:empty) {
+			padding: 15px;
+		}
+		.container {
+			padding-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="form-group">
+			<label>邮箱地址</label>
+			<input type="email" class="form-control" placeholder="请输入邮箱地址" id="email">
+		</div>
+		<!-- 错误 bg-danger 正确 bg-success -->
+		<p id="info"></p>
+	</div>
+	<!-- 引入阿贾克斯 -->
+	<script src="/js/ajax.js"></script> 
+	<script>
+		// 注意事项：
+		// 1、bg-danger这个类名是由bootstrap内置的样式
+		// 2、正则：/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/
+		//邮箱输入框
+		var emailInp = document.getElementById('email');
+		//提示信息的p元素
+		var info = document.getElementById('info');
+	
+		emailInp.onblur=function() {
+			//获取用户输入的信息
+			var email=this.value
+			//规定邮箱正则
+			var reg= /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/
+			//验证用户输入的格式是否正确
+			if(!reg.test(email)) {
+				info.innerHTML='邮箱格式不正确，请重新输入'
+				info.className='bg-danger'
+				return //阻止程序继续执行
+			}
+			ajax({
+				type:'get',
+				url:'http://localhost:3000/verifyEmailAdress',
+				data: {
+					email:email
+				},
+				success:function(date) {
+				
+					info.innerHTML=date.message
+					info.className='bg-success'
+					
+					
+				},
+				error:function(date) {
+					info.innerHTML=date.message
+					info.className='bg-danger'
+					
+				}
+			})
+			
+		}
+	</script>
+</body>
+</html>

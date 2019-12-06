@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>123</button>
+    <button>123</button>
+    <button>123</button>
+    <script>
+        var btns = document.querySelectorAll("button");
+        btns.forEach(function(value, index) {
+            btns[index].addEventListener('click', function() {
+                this.disabled = true;
+                setTimeout(function() {
+                    this.disabled = false;
+                }.bind(this), 2000)
+            })
+        })
+    </script>
+    <!-- <script>
+        var btns = document.querySelectorAll('button');
+        btns.forEach(function(value) {
+            value.addEventListener('click', function() {
+                value.disabled = true;
+                setTimeout(function() {
+                    value.disabled = false;
+                }, 2000)
+            })
+        })
+    </script> -->
+
+</body>
+
+</html>

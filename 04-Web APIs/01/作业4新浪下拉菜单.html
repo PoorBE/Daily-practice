@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        a {
+            display: block;
+            color: #4C4C4C;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        ul {
+            display: none;
+            list-style: none;
+        }
+        
+        .dd {
+            position: relative;
+        }
+        
+        .dd,
+        li {
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .dd i {
+            position: absolute;
+            top: 17px;
+            right: 3px;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            transform: rotate(-45deg);
+        }
+        
+        .dd a:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="dd">
+            <a href="#">微博</a>
+            <i></i>
+        </div>
+        <ul>
+            <li><a href="#">私信</a></li>
+            <li><a href="#">私信</a></li>
+            <li><a href="#">私信</a></li>
+        </ul>
+    </div>
+    <script>
+        var lis = document.querySelector('ul');
+        var dd = document.querySelector('.dd');
+        var i = document.querySelector('i');
+        dd.onmouseover = function() {
+            lis.style.display = 'block';
+            i.style.transform = 'rotate(-225deg)'
+        }
+        dd.onmouseout = function() {
+            lis.style.display = 'none';
+            i.style.transform = 'rotate(-45deg)'
+        }
+    </script>
+</body>
+
+</html>

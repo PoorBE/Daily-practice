@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // var computer = {
+        //     color: 'black',
+        //     weight: '3kg',
+        //     brand: '神州',
+        //     type: 'k670e',
+        //     watch: function() {
+        //         console.log('我在看电影');
+        //     },
+        //     listen: function() {
+        //         console.log('我在听音乐');
+
+        //     },
+        //     play: function() {
+        //         console.log('我在看玩游戏');
+        //     },
+        //     coding: function() {
+        //         console.log('我在看敲代码');
+        //     }
+        // }
+        // console.log(computer);
+        // computer['watch']();
+
+        // 遍历下面对象
+        // var dog = {
+        //     dName: "coco",
+        //     type: "阿拉斯加犬",
+        //     age: "5岁",
+        //     color: "棕红色"
+        // };
+        // for (var key in dog) {
+        //     console.log(dog[key]);
+        // }
+        //请描述下面代码的输出结果以及运行原因
+        // var num = 1;
+
+        // function demo() {
+        //     console.log(num);
+
+        //     function demoSon() {
+        //         console.log(num);
+        //         num = 3;
+        //         console.log(num);
+        //     }
+        //     var num = 2
+        //     demoSon();
+        // }
+        // demo();
+        //         undefined
+        // 2
+        //  3
+        function getResult() {
+            var max = arguments[0],
+                min = arguments[0],
+                sum = 0;
+
+            for (var i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                };
+                if (arguments[i] < min) {
+                    min = arguments[i];
+                };
+                sum += arguments[i];
+
+            }
+            var averages = sum / arguments.length;
+            return {
+                最大值: max,
+                最小值: min,
+                和: sum,
+                平均值: averages
+            };
+        }
+        console.log(getResult(1, 5, 6, 7));
+        console.log(getResult(22, 1, 5, 55, 99, 55));
+        console.log(getResult(1, 5, 6, 7, 5, 8, 8, 6, 9, 2, 4, 8, 8));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

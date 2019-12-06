@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击发送请求</button>
+    <script>
+        function fn3(data) {
+            console.log(data);
+        }
+        var btn=document.querySelector('#btn')
+        btn.onclick=function(){
+          // 创建script标签
+			var script = document.createElement('script');
+			// 设置src属性
+			script.src = 'http://localhost:3001/data?callback=fn3';
+			// 将script标签追加到页面中
+			document.body.appendChild(script);
+			// 为script标签添加onload事件
+			script.onload = function () {
+				// 将body中的script标签删除掉
+				document.body.removeChild(script);
+            }
+        }
+    </script>
+    <!-- <script src="http://localhost:3001/data?callback=fn"></script> -->
+</body>
+</html>

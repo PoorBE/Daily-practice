@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            /*图片在页面中是绝对定位的。top和left值通过js获得*/
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/angel.gif" alt="">
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            var x = e.pageX; //获得移动的x坐标
+            var y = e.pageY; //获得移动的y坐标
+            var img = document.querySelector('img');
+            //将鼠标移动获得的坐标
+            img.style.top = y - 100 + 'px';
+            img.style.left = x - 100 + 'px';
+        })
+    </script>
+</body>
+
+</html>

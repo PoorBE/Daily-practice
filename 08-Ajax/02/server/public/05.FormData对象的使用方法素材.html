@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 创建普通的html表单 -->
+	<form id="form">
+		<input type="text" name="username" id="username">
+		<input type="password" name="password" id="password">
+		<input type="button" id="btn" value="提交">
+	</form>
+	<script type="text/javascript">
+		// 获取按钮
+		var btn = document.getElementById('btn');
+		// 获取表单
+		var form = document.getElementById('form');
+		btn.onclick=function() {
+			var fd=new FormData(form)//提交自动收集form表单所有表单数据
+			// FormData方法
+			fd.set('age',20) //若表单中没有age，则添加此数据，若由此数据，则会替换数据，不管用户输入的什么，都会被替换
+			fd.set('username','张三')
+			fd.delete('password')//删除数据
+			fd.append('username','李四')//和set一样可以修改数据，但可以保留原有数据
+			// fd.get('')//获取数据
+			console.log(fd.get('password'));
+			
+			var xhr=new XMLHttpRequest()
+			xhr.open('post','http://localhost:3000/formData')
+			xhr.send(fd)
+			xhr.onload=function() {
+				console.log(xhr.responseText)
+			}
+		}
+	</script>
+</body>
+</html>

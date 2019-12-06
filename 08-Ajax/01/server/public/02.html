@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>处理服务器端返回的JSON数据</title>
+</head>
+<body>
+   
+    
+    <script>
+    // // 创建阿贾克斯对象
+    // var xhr=new XMLHttpRequest()
+    // //告诉阿贾克斯请求方式和请求地址
+    // // 1).请求方式 2)请求地址
+    // xhr.open('get','http://localhost:3000/first')
+    //     // 发送请求
+    // xhr.send()
+    //     //等待响应，获取数据
+    // xhr.onload=function(){
+    // xhr.responseText
+          
+    //     }
+    var xhr=new XMLHttpRequest()
+    xhr.open('get','http://localhost:3000/responseData')
+    xhr.send()
+    xhr.onload=function(){
+        // xhr.responseText//是一个json字符串要用JSON.parse()转换为对象
+        var str=JSON.parse(xhr.responseText)
+        console.log(str);
+        
+        document.body.innerHTML='<h2>'+str.name+'</h2>'
+    }
+    </script>
+</body>
+</html>

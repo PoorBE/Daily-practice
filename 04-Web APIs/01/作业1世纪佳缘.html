@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            color: #999;
+            margin: 100px 500px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="邮箱/ID/手机号" id="input">
+    <script>
+        var input = document.getElementById('input');
+        input.onfocus = function() {
+            input.value = '';
+            input.style.border = '1px solid red';
+        }
+        input.onblur = function() {
+            input.value = '邮箱/ID/手机号';
+            input.style.border = '1px solid #ccc';
+        }
+    </script>
+</body>
+
+</html>

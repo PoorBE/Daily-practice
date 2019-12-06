@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //凑钱1,2，5凑20元钱有多少种可能
+        for (var a = 0; a <= 20; a++) {
+            for (var b = 0; b <= 10; b++) {
+                for (var c = 0; c <= 4; c++) {
+                    if (20 == a + 2 * b + 5 * c) {
+                        document.write("一元" + a + "二元" + b + "五元" + c + "<br />");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

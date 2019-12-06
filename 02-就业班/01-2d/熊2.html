@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #E6EEF0;
+        }
+        
+        @keyframes xiong2 {
+            0% {}
+            12.5% {
+                top: 400px;
+                left: 50px;
+                background: url(media/bear_02.png);
+            }
+            25% {
+                top: 350px;
+                left: 100px;
+                background: url(media/bear_03.png);
+            }
+            37.5% {
+                top: 300px;
+                left: 150px;
+                background: url(media/bear_04.png);
+            }
+            50% {
+                top: 250px;
+                left: 200px;
+                background: url(media/bear_05.png);
+            }
+            65.5% {
+                top: 250px;
+                left: 250px;
+                background: url(media/bear_06.png);
+            }
+            75% {
+                top: 300px;
+                left: 300px;
+                background: url(media/bear_07.png);
+            }
+            87.5% {
+                top: 350px;
+                left: 350px;
+                background: url(media/bear_08.png);
+            }
+            100% {
+                top: 400px;
+                left: 400px;
+                background: url(media/bear_01.png);
+            }
+        }
+        
+        .dd {
+            position: relative;
+            height: 1000px;
+            width: 100%;
+        }
+        
+        .xiong2 {
+            position: absolute;
+            top: 500px;
+            left: 0;
+            width: 200px;
+            height: 100px;
+            background: url(bear_01.png);
+            animation: xiong2 1.5s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dada">
+        <div class="xiong2"></div>
+    </div>
+</body>
+
+</html>

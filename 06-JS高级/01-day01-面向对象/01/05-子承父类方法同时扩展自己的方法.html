@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+        }
+        class Son extends Father {
+            constructor(x, y) {
+                super(x, y) //super调用父亲构造函数必须放在this之前
+                this.x = x;
+                this.y = y;
+            }
+            subtract() {
+                console.log(this.x - this.y);
+            }
+        }
+        var son = new Son(8, 3);
+        son.subtract()
+        son.sum()
+    </script>
+</body>
+
+</html>

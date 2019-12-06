@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // *相当于>=0
+        var reg = /^a*$/;
+        console.log(reg.test('')); //true
+        // +,*相当于>=1
+        // ?,*相当于1||0
+        //{n}相当于重复几次
+        //{n，}相当于大于等于n
+        //{n，num}相当于大于等于n并且小于等于num
+        var reg = /^a{2,5}$/;
+        console.log(reg.test('aa'));
+        console.log(reg.test('aaaaaa'));
+    </script>
+</body>
+
+</html>

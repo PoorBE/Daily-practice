@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        body {
+            height: 1000px;
+            width: 100%;
+        }
+        
+        .love {
+            position: absolute;
+            transition: linear 1s;
+            color: rgba(255, 255, 255, .5)
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+
+        var colors = ['yellow', 'blue', 'orange', 'purple', 'red', 'green', 'springgreen', 'lawngreen', 'cyan', 'aquamarine']
+        var text = ['富强', '民主', '文明', '和谐', '自由', '平等', '公正', '法治', '爱国', '敬业', '诚信', '友善']
+        var body = document.body
+        body.onclick = function(e) {
+            var div = document.createElement('div')
+            var texts = text[getRandom(0, text.length - 1)]
+            div.innerHTML = texts
+            body.appendChild(div)
+            var color = colors[getRandom(0, colors.length - 1)]
+            var x = e.pageX
+            var y = e.pageY
+            div.className = 'love'
+            div.style.cssText = 'top:' + (y - 25) + 'px;left:' + (x - 15) + 'px;color:' + color + ''
+                // div.style.top = (y - 25) + 'px'
+                // div.style.left = (x - 15) + 'px'
+                // div.style.color = color
+            setTimeout(function() {
+                div.style.top = (y - 80) + 'px'
+                div.style.fontSize = 30 + 'px';
+            }, 0)
+            setTimeout(function() {
+                body.removeChild(div)
+            }, 1000)
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // var obj = new Object;
+        // obj.name = '鸣人';
+        // obj.sex = '男';
+        // obj.age = 19;
+        // obj.skill = function() {
+        //     console.log('影分身术');
+        // };
+        // for (var key in obj) {
+        //     // console.log(key);
+
+        //     console.log(obj[key]);
+
+        // }
+
+        // var dog = {
+        //     name: '咳咳',
+        //     age: 5,
+        //     hobby: '吃屎',
+        //     color: '黑色',
+        //     suo: function() {
+        //         console.log('我爱你');
+
+        //     }
+        // }
+        // for (var k in dog) {
+        //     console.log(dog[k]);
+
+        // }
+        function Star(uname, age, sex, sing) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sing) {
+                console.log(sing);
+
+            }
+        }
+        var ldh = new Star('刘德华', 18, '男');
+        ldh.sing('冰雨');
+        console.log(ldh);
+        for (var k in ldh) {
+            // console.log(k);
+            console.log(ldh[k]);
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

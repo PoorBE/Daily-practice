@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        .container {
+          padding-top: 60px;
+        }
+    
+        .padding {
+          padding: 5px 0 20px 0;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+          <label>请选择文件</label>
+          <input type="file" id="file" accept="image/*">
+          <div class="progress">
+            <div class="progress-bar" style="width: 0%;" id="bar">0%</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var file = document.getElementById('file');
+        var bar = document.getElementById('bar');
+	    file.onchange = function(){
+            var fd=new FormData()
+            fd.append('attrName',this.files[0])
+            var xhr=new XMLHttpRequest()
+            xhr.open('post','http://localhost:3000/upload')
+            xhr.upload.onprogress=function(ev) {
+              var percent= ev.loaded / ev.total *100 +'%'
+              bar.style.width=percent
+              bar.innerHTML=percent
+            }
+            xhr.send(fd)
+            xhr.onload=function(){
+                if(xhr.status==200) {
+                    console.log(JSON.parse(xhr.responseText));
+                    
+                }
+            }
+	    }
+      </script>
+</body>
+</html>

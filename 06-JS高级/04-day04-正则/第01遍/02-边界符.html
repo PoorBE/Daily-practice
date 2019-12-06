@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var rg = /abc/;
+        console.log(rg.test('abc')); //true
+        console.log(rg.test('abcd')); //true
+        console.log(rg.test('aabc')); //true
+        console.log('~~~~~~~~~~~~~~~~~~~~');
+        var rg1 = /^abc/;
+        console.log(rg1.test('abc')); //true
+        console.log(rg1.test('abcd')); //true
+        console.log(rg1.test('aabc')); //fales
+        console.log('~~~~~~~~~~~~~~~~~~~~');
+        var rg2 = /^abc$/;
+        console.log(rg2.test('abc')); //true
+        console.log(rg2.test('abcd')); //fales
+        console.log(rg2.test('aabc')); //fales
+    </script>
+</body>
+
+</html>

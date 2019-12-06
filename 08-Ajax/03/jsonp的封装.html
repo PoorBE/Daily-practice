@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点击发送</button>
+    <script>
+        //s1里面
+
+        var btn = document.querySelector('#btn')
+        btn.onclick = function () {
+            jsonp({
+                src:"http://localhost:3001/data?callback=fn1"
+            })
+        }
+
+        //封装的代码有两部分
+        function jsonp(options) {
+            var {src} = options
+            window['fn1'] = function(data){
+                console.log(data)
+            } 
+            var script = document.createElement('script')
+            script.src = src 
+            document.body.appendChild(script)
+            //当script标签的src中的内容解析执行完了之后就没有存在的意义，我们就可以删掉
+            script.onload = function () {
+                document.body.removeChild(script)
+            }
+        }
+      
+        
+    </script>
+    <!-- <script src="http://localhost:3001/data?callback=fn1"></script> -->
+
+    <!-- 有两部分代码
+    A网站：全局函数定义
+    B网站：全局函数调用 数据在B网站 通过函数实参把数据返回给A网站 -->
+</body>
+
+</html>

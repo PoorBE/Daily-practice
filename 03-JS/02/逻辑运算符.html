@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        //逻辑与 && 有假即为假。全真才为真
+        console.log(3 > 5 && 2 > 1); //f
+        console.log(3 < 5 && 2 > 1); //t
+        //逻辑或 || 有真即为真。全假才为假；
+        console.log(3 > 5 || 2 > 1); //t
+        console.log(3 < 5 || 2 < 1); //f
+        //逻辑非!
+        console.log(!(3 < 5 || 2 < 1)); //f
+
+
+        //逻辑中断
+        //逻辑与&&
+        console.log(2 * 2 && 4 * 4); //第一表达式为真，则输出第二个表达式
+        console.log(NaN && 456 & 6565 + 56515);
+        console.log(0 && 456 & 6565 + 56515); //第一个表达式为0 '' underfound NaN 则输出第一个
+        //逻辑或||
+        console.log(123 || 4 + 6); //123 第一个表达式为真。则输出第一个表达式
+        console.log(0 || 9 + 9); //18 第一个表达式为假，则输出第二个表达式
+        console.log((0 || 4 + 6 && 8 + 2)); //10
+        var num = 10;
+        console.log(789 || num++); //789
+        console.log(num); //10
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+  <section class="todoapp">
+    <header class="header">
+      <h1>todos</h1>
+      <input id="task" class="new-todo" placeholder="添加新任务" autofocus>
+    </header>
+    <section class="main">
+      <ul class="todo-list" id="todo-list">
+        <!-- li默认是未完成状态
+        li的类名如果设置为editing,则当前是编辑状态
+        li的类名如果设置为completed，则是完成状态 -->
+     
+      </ul>
+    </section>
+    <!-- This footer should hidden by default and shown when there are todos -->
+    <footer class="footer">
+      <!-- This should be `0 items left` by default -->
+      <span class="todo-count"><strong>0</strong> item left(未完成数量)</span>
+      <button class="clear-completed">Clear completed(清除所有已完成)</button>
+    </footer>
+  </section>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/template-web.js"></script>
+  <!-- 创建任务列表模板 -->
+  <script type="text/html" id='taskTpl'>
+    {{each tasks}}
+    <li class={{$value.completed==true?"completed":""}}>
+        <div class="view">
+          <input class="toggle" type="checkbox" {{$value.completed==true?"checked":""}}>
+          <label>{{$value.title}}</label>
+          <!-- 为删除按钮设置自定义属性，为了后面获取id -->
+          <button class="destroy" data-id="{{$value._id}}"></button>
+        </div>
+        <input class="edit" value="Create a TodoMVC template">
+      </li>
+      {{/each}}
+  </script>
+  <!-- 引入进度条所需的文件 -->
+  <link rel="stylesheet" href="./js/nprogress/nprogress.css">
+  <script src="./js/nprogress/nprogress.js"></script>
+  <script>
+    //进度条
+    $(document).ajaxStart(()=>NProgress.start())
+    $(document).ajaxComplete(()=>NProgress.done())
+    //用于存放任务列表的数组
+    var taskAry = [];
+    //任务列表的父容器
+    var taskBox = $('#todo-list');
+    //添加新任务输入框
+    var taskInp = $('#task');
+    $.ajax({
+      url:'/todo/task',
+      type:'get',
+      success:function(res){
+        taskAry=res
+        render()
+      }
+    })
+    //为文本框绑定键盘弹起事件
+    $('#task').on('keyup',function(e){
+      //获取用户输入的内容
+      var taskName=$(this).val()
+      //只有按下回车才会触发事件
+      if(e.keyCode==13) {
+        // 如果用户什么都没输入，或者输入空格
+        if(taskName.trim()=='') {
+          alert('请输入任务名称')
+          return //阻止程序向下执行
+        }
+        $.ajax({
+          type:'post',
+          url:'/todo/addTask',
+          contentType:'application/json',
+          data:JSON.stringify({title:taskName}),
+          success:function(res){
+            taskAry.push(res) //吧最新的任务队形追加给taskAry
+            render()
+            //添加完新任务后，清空输入框的内容
+            taskInp.val('')
+          }
+        })
+      }
+    })
+    // 事件绑定必须在页面加载时有这个元素，所以用事件委托为删除按钮绑定点击事件
+    taskBox.on('click','.destroy',function(){
+        //获取id 值,删除按钮的自定义属性
+        var _id=$(this).attr('data-id')
+        $.ajax({
+          type:'get',
+          url:'/todo/deleteTask',
+          data:{
+            _id
+          },
+          success:function(res){
+          //通过id找索引index，在通过index删除对应的任务
+          var index=taskAry.findIndex(item=>item._id==_id)
+            taskAry.splice(index,1)
+            render()
+          }
+        })
+    })
+    //修改任务状态为复选框绑定改变事件，利用事件委托绑定    
+    taskBox.on('change','.toggle',function(){
+      var check=$(this).is(':checked') //获取复选框的状态，返回布尔值
+      var id=$(this).siblings('button').attr('data-id')
+     $.ajax({
+       type:'post',
+       url:'/todo/modifyTask',
+       contentType:'application/json',
+       data:JSON.stringify({_id:id,completed:check}),
+       success:function(res){
+        //  通过id找到要修改的那一项
+        var item=taskAry.find(item=>item._id==id)
+         item.completed=check
+         render()
+       }
+     })
+      
+      
+    })
+
+    //修改名称任务，为label绑定双击事件利用事件委托
+    taskBox.on('dblclick','label',function(){
+      $(this).parent().parent().addClass('editing')
+      var txt=$(this).html()
+      $(this).parent().siblings('.edit').val(txt).focus()
+    })
+    //输入框失去焦点  将用户输入的内容重新赋值给label
+    taskBox.on('blur','.edit',function(){
+      var title=$(this).val() //获取用户修改完的内容
+      var id=$(this).siblings('.view').children('button').attr('data-id')
+      $.ajax({
+        type:'post',
+        url:'/todo/modifyTask',
+        contentType:'application/json',
+        data:JSON.stringify({_id:id,title:title}),
+        success:function(res){
+         var item=taskAry.find(item=>item._id==id)
+         item.title=title
+         render()
+        }
+      })
+    })
+    //清除所有已完成的任务
+    $('.clear-completed').on('click',function(){
+      $.ajax({
+        type:'get',
+        url:'/todo/clearTask',
+        success:function(res){
+          taskAry=res
+          render()
+        }
+      })
+      
+    })
+
+
+    //多次出现重复代码，所以封装成一个函数
+    function render(){
+      // 利用filter返回符合条件的数组的长度
+      var num =taskAry.filter(item=>item.completed==false).length
+      //将获取的未完成的任务数量赋值给 strong
+      $('strong').html(num)
+      //获取为完成的任务数量
+      var html=template('taskTpl',{tasks:taskAry})
+      taskBox.html(html)
+    }
+  </script>
+</body>
+</html>

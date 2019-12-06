@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>传递get请求参数</title>
+</head>
+<body>
+        <p><input type="text" class="username"></p>
+        <p><input type="text" class="age"></p>
+        <p><input type="button" class="btn" value="提交"></p>
+        <script>
+            //获取元素
+            var btn=document.querySelector('.btn')
+            var username=document.querySelector('.username')
+            var age=document.querySelector('.age')
+            btn.onclick=function(){
+                //点击按钮后获取用户名和年龄
+                var nameval=username.value
+                var ageval=age.value
+              //发送阿贾克斯请求
+              var xhr=new XMLHttpRequest()
+              xhr.open('get','http://localhost:3000/get?username='+nameval+'&age='+ageval)
+            xhr.send()//发送请求
+            xhr.onload=function(){
+                console.log(JSON.parse(xhr.responseText));
+                
+            }
+            }
+        </script>
+</body>
+</html>

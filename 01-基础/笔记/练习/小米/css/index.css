@@ -1,0 +1,181 @@
+
+.top_nav {
+	height: 41px;
+	width: 100%;
+	background-color: black;
+}
+.top_nav li {
+     float: left;
+     line-height: 41px;
+     margin-right: 10px;
+}
+ 
+ .top_nav2 {
+ 	height: 100px;
+ 	width: 100%;
+ }
+ .top_logo {
+ 	line-height: 100px;
+ }
+  .top_nav3 {
+  	margin-left: 20px;
+  	line-height: 100px;
+  }
+ .top_nav3 li {
+		float: left;
+		margin-left: 30px;
+		font-size: 15px;
+ }
+
+
+
+ .middle {
+ 	height: 460px;
+ 	width: 100%;
+ 	margin-bottom: 10px;
+ }
+ .middle_left {
+ 	height: 460px;
+ 	width: 237px;
+ 	background-color: #2c505f;
+ }
+ .middle_left li {
+ 	height: 46px;
+ 	margin-left: 30px;
+ 	line-height: 46px;
+ 	font-size: 15px;
+ }
+ .middle_left a {
+ 	color: white;	
+ }
+ .middle_left  i {
+ 	margin-left: 175px;
+
+ }
+ .middle2 {
+ 	height: 176px;
+ 	width: 100%;
+ 	margin-bottom: 60px;
+ }
+ .middle2_picture {
+ 	height: 132px;
+ 	width: 237px;
+ 	background-color: #5f5750;
+ 	text-align: center;
+ 	padding-top: 40px;
+ 	margin-right: 10px;
+ }
+ .middle2_picture p {
+ 	margin-top: 20px;
+ 	color: white;
+ 	font-size: 12px;
+ }
+ .middle2 img {
+ 	height: 172px;
+ 	width: 318px;
+ 	margin-right: 10px;
+ }
+ .middle2 img:last-child {
+ 	margin-right: 0px;
+ }
+
+
+
+ .middle_nav {
+ 	height: 740px;
+ 	background-color: #f5f5f5;
+ }
+ .characters {
+ 	padding-top: 60px;
+ 	margin-bottom: 20px;
+ }
+ .box_left {
+ 	font-size: 20px;
+ }
+ .box_right {
+ 	font-size: 15px;
+ }
+
+
+
+.middle_left_picture  {
+
+	float:left;
+}
+
+ 
+ .middle-right-picture li {
+ 	height: 280px;
+ 	width: 234px;
+ 	background-color: pink;
+ 	float: left;
+ 	margin-left: 10px;
+ 	margin-bottom: 10px;
+ 	text-align: center;
+ 	padding-top: 20px;
+ }
+ .middle_right_picture img {
+	margin-top: 30px;
+	height: 139px;
+	width: 139px;
+}
+.middle_nav span {
+	display: block;
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+
+
+
+.footre {
+	height: 368px;
+	width: 100%;
+	margin-top: 40px;
+}
+.top_footre {
+	height: 210px;
+}
+.top_footre dl {
+	float: left;
+	width: 160px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.top_footre dt {
+	margin-top: 20px;
+	font-size: 15px;
+	color: black;
+}
+.top_footre dl span {
+	display: block;
+	font-size: 15px;
+	margin-left: 50px;
+	width: 214px;
+	border-left: 1px solid #ccc;
+}
+.top_footre dl span:first-child {
+	font-size: 25px;
+	color: #ffa638;
+}
+.dottom_footre {
+	height: 157px;
+	background-color: #fafafa;
+	overflow: hidden;
+}
+
+.bottom_logo {
+	line-height: 157px;
+}
+.boxlast span {
+	display: block;
+}
+.dottom_footre .boxlast {
+	margin-top: 50px;
+	margin-left: 15px;
+	font-size: 12px;
+}
+.dottom_footre .boxlast strong {
+	text-align: center;
+}

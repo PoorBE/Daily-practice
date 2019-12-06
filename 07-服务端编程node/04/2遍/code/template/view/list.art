@@ -1,0 +1,30 @@
+
+{{extend '../common/layour.art'}}
+{{block 'style'}} 
+<style>
+    /* 列表页的样式 */
+    ul li{
+      padding:20px;
+      font-size: 24px;
+    }
+  </style>
+{{/block}}
+
+{{block 'main'}} 
+<div class="main">
+    <h1>列表页</h1>
+    <ul>
+      {{each lis}}  
+        <li>
+          {{$value.title}},{{dateformat($value.time,'yyyy年mm月dd日 hh时MM分ss秒')}}
+        </li>  
+      {{/each}}
+    </ul>  
+  </div>
+{{/block}}
+{{block 'script'}} 
+<script>
+    console.log('我是列表页面的js代码')
+  </script>
+
+{{/block}}

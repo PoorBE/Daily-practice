@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+            width: 200px;
+            height: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        button {
+            width: 300px;
+            height: 50px;
+            border: 1px solid skyblue;
+            background-color: skyblue;
+            font-size: 20px;
+            color: orange;
+            box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>西施</li>
+        <li>貂蝉</li>
+        <li>昭君</li>
+        <li>凤姐</li>
+    </ul>
+    <button>点击添加一个美女</button>
+    <script>
+        var ul = document.querySelector('ul');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', fu);
+
+        function fu() {
+            var li = document.createElement('li');
+            li.innerHTML = '我是美女';
+            ul.insertBefore(li, ul.children[0]);
+        }
+        ul.addEventListener('click', function(e) {
+            for (var i = 0; i < ul.children.length; i++) {
+                ul.children[i].style.backgroundColor = '';
+            }
+            e.target.style.backgroundColor = 'red';
+        });
+    </script>
+</body>
+
+</html>

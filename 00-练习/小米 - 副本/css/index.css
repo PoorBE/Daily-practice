@@ -1,0 +1,290 @@
+.w	{
+	width: 1225px;
+	margin: 0 auto;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+@font-face {
+  	font-family: 'icomoon';
+  	src:  url('../fonts/icomoon.eot?7kkyc2');
+  	src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+}
+.shortcut {
+	height: 40px;
+	line-height: 40px;
+	background-color: #333333;
+}
+.shortcut a {
+	font-size: 12px;
+	color: #ccc;
+}
+.shortcut i {
+	margin: 0 8px;
+	color: #ccc;
+}
+.shortcut a:hover {
+	color: red;
+}
+.nav {
+	position: relative;
+	height: 100px;
+}
+.logo a {
+	position: absolute;
+	top:22px;
+	left:0;
+	height: 55px;
+	width: 55px;
+	font-size: 0;
+	background: url(../img/logo.png);
+}
+.nav-l {
+	position: absolute;
+	top: 15px;
+	left: 60px;
+	width: 163px;
+	height: 66px;
+	background: url(../img/haidaoquannew.gif);
+}
+.nav-r {
+	position: absolute;
+	top:40px;
+	left: 247px;
+	height: 20px;
+	width: 700px;
+}
+.nav-r li {
+	float: left;
+	margin-right: 26px;
+	line-height: 20px;
+	font-size: 16px;
+}
+.nav-r a:hover {
+	color: #ff6700;
+	border-bottom:2px solid #ff6700;
+}
+.header {
+	height: 460px;
+	background-color: pink;
+}
+.dropdown {
+	background-color: #2c505f;
+	width: 234px;
+}
+.dropdown li {
+	height: 46px;
+	line-height: 46px;
+	padding:0 23px 0 30px;
+	color: white;
+	font-size: 16px;
+	transition: all 0.5s;
+}
+.dropdown a,
+.dropdown i {
+	color: white;
+}
+.dropdown li:hover {
+	margin-left: 5px;
+	background-color: white;
+}
+.dropdown li:hover a {
+	color: #ff6700;
+}
+.dropdown i {
+	float: right;
+	font-family: 'icomoon';
+}
+.navitems {
+	position: relative;
+}
+.arrow-l,
+.arrow-r {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	height: 40px;
+	width: 30px;
+	line-height: 40px;
+	color: white;
+	text-align: center;
+	font-family: 'icomoon';
+	background:rgba(0, 0, 0, 0.3);
+}
+.arrow-r {
+	right:0;
+}
+.navitems a:hover {
+	background: rgba(51, 102, 102, 0.3);
+}
+.bottom {
+	position: absolute;
+	bottom:20px;
+	left: 100px;
+	height: 20px;
+	background:rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+}
+.bottom li {
+	float: left;
+	margin: 5px;
+	height: 10px;
+	width: 10px;
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.feature {
+	margin-top: 14px;
+	height: 170px;
+}
+.feature-l {
+	width: 234px;
+	height: 114px;
+	padding-top:56px;
+	text-align: center;
+	color: #fff;
+	background-color: #5f5750;
+	font-size: 14px;
+}
+.feature-r li {
+	float: left;
+	width: 316px;
+	height: 170px;
+	margin-left: 14px;
+}
+.feature-r img {
+	width: 100%;
+	transition: all 0.5s;
+}
+.feature-r img:hover {
+	margin: -5px 0 0 -5px;
+}
+.all-wo {
+	margin: 50px 0 ;
+	background-color:#f5f5f5;
+}
+.zhineng {
+	overflow: hidden;
+	/*height: 1000px;*/
+}
+.box-hd {
+	margin-top: 60px;	
+	height: 40px;
+	line-height:40px;
+	font-size: 20px;
+}
+.box-hd a {
+	float: right;
+	padding-right: 10px;
+	font-size: 12px;
+}
+.box-bd-f li {
+	position: relative;
+	float: left;
+	width: 234px;
+	height: 300px;
+	text-align: center;
+	background-color: #fff;
+	margin: 0 0 13px 13px;
+
+}
+.box-bd-f .mian{
+	position: absolute;
+	top:-21px;
+	left: 50%;
+	margin-left: -32px;
+	width: 64px;
+	height: 20px;
+}
+.box-bd-f img {
+	width:160px;
+	height: 160px;
+	margin: 20px 0;
+	transition: all 0.5s;
+}
+.box-bd-f img:hover {
+	margin-left:5px; 
+}
+.box-bd-f h4 {
+	color: #000;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.box-bd-f h6 {
+	margin-bottom: 10px;
+}
+.box-bd-f p {
+	color: #ff6700;
+	font-size: 14px;
+}
+.footer {
+	height: 366px;
+}
+.ft-hd {
+	height: 210px;
+	background-color: #fff;
+}
+.fth-l dl {
+	float: left;
+	padding: 50px 100px 0 0 ;
+}
+.fth-l dt {
+	color: #000;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.fth-l dd {
+	margin-bottom: 12px;
+}
+.fth-r {
+	width: 250px;
+	height: 112px;
+	margin-top: 60px;
+	text-align: center;
+	border-left: 1px solid #ccc;
+}
+.fth-r h4 {
+	font-size: 18px;
+	color:#ff6700;
+}
+.fth-r p {
+	margin: 5px 0;
+	font-size: 14px;
+	color: #000;
+}
+.ft-bd {
+	position: relative;
+}
+.logo {
+	position: absolute;
+	top:30px;
+	left:0;
+	width: 55px;
+	height: 55px;
+}
+.top {
+	position: absolute;
+	top:30px;
+	 left:66px;
+}
+.bottom {
+	position: absolute;
+	top: 54px;
+	left:66px;
+}
+.fashao {
+	position: absolute;
+	top: 116px;
+	right: 230px;
+	font-size: 16px;
+	font-family: "楷体";
+}

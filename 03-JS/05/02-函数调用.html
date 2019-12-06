@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function backTwo() {
+            var year = prompt('请输入判断的年份：');
+            if (runYear(year)) { //如果是闰年，则为true，执行if里的判断
+                alert(year + '这一年是闰年2月有29天');
+            } else {
+                alert(year + '这一年是平年2月有28天');
+            }
+        }
+        backTwo();
+
+        function runYear(year) {
+            var flog = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flog = true;
+            }
+            return flog;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

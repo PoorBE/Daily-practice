@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数封装</title>
+</head>
+<body>
+    <script>
+        function ajax(options){
+            //解构赋值
+            let {type,url,success,data,header} = options
+            var xhr=new XMLHttpRequest()
+            var params=''
+            //循环用户传递来的对象格式参数
+            for (var i in data) {
+                // 将参数转换成字符串形式
+                params+=i+'='+data[i]+'&'
+            }
+            //将参数最后的&去掉，然后重新赋值
+            params=params.substr(0,params.length-1)
+            //判断请求方式是get还是post
+            if (type=='get') {
+                xhr.open(type,url+'?'+params)
+                 xhr.send()
+            }else {
+                xhr.open(type,url)
+                if (header['Content-Type']=='application/x-www-form-urlencoded') {
+                    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+                 xhr.send(params)
+                } else {
+                    xhr.setRequestHeader('Content-Type','application/json')
+                 xhr.send(JSON.stringify(data))
+                }
+              
+            }        
+            xhr.onload=function(){
+               success(xhr.responseText)
+            }
+        }
+        ajax({
+            type:'post',
+            data: {
+                name:'张三',
+                age :20
+            },
+            header: {
+                'Content-Type':'application/json'
+            },
+            url:'http://localhost:3000/first',
+            success:function(data){
+                console.log(data);
+            },
+            
+        })
+    </script>
+</body>
+</html>

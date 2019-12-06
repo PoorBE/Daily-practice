@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+  <style type="text/css">
+    .container {
+      padding-top: 60px;
+    }
+
+    .padding {
+      padding: 5px 0 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-group">
+      <label>请选择文件</label>
+      <input type="file" id="file" accept="image/*">
+      <div class="progress">
+        <div class="progress-bar" style="width: 0%;" id="bar">0%</div>
+      </div>
+      <img src="" id="preview" alt="">
+    </div>
+  </div>
+  <script type="text/javascript">
+    var file = document.getElementById('file');
+    var bar = document.getElementById('bar');
+    // 1. 如果想实现图片预览，有两种方式可以让大家选择（看公司后台）
+    // 第一种方式 用h5的 FileReader中的readAsDataURL来实现 在前端进行预览 图片的src放的在base64的数据
+    // 第二种方式 用的FormData+ajax来实现 先上传到服务器后台，再返回一个后台图片所在路径 src放的是后台所在的图片的url地址
+    //图片有可能是壁纸 壁纸有可能很大 传输的时候如果网速不好，
+    file.onchange = function () {
+      var fd = new FormData()
+      // this.files[0]这个东西得到的是一个二进制的数据
+      fd.append('attrName', this.files[0])
+      var xhr = new XMLHttpRequest()
+      console.log(xhr)//ajax对象
+      xhr.open('post', 'http://localhost:3000/upload')
+      // upload相关的配置一定要在xhr.send前面写
+      //一个文件有可能很大 就像一个大冰块
+      xhr.upload.onprogress = function (event) {
+        console.log(event)
+        var percent = event.loaded / event.total *100 + '%'
+        bar.style.width = percent 
+        bar.innerHTML = percent
+      }
+      xhr.send(fd)
+      xhr.onload = function () {
+        if (xhr.status == 200) {
+          console.log(xhr.responseText)
+          var obj = JSON.parse(xhr.responseText)
+          document.querySelector('#preview').setAttribute('src', obj.path)
+        }
+      }
+    }
+        // console.dir(this.files[0])//得到的是图片的二进制的数据，不能直接打印出来，必须用H5中的FileReader读取它的内容
+            //this.files[0]是属于文件类型对象，是js内置
+            // var fileReader = new FileReader()
+            // fileReader.readAsDataURL(this.files[0])//文件有可能很大，读取是异步
+            // fileReader.onload = function(){
+            //     console.log(fileReader.result)
+            //     document.querySelector('#preview').setAttribute('src',fileReader.result)
+            // }
+  </script>
+</body>
+
+</html>

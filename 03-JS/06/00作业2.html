@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function getDayNum(time) {
+            var nowTime = +new Date('2019-01-01 00:00:00');
+            var inputTime = +new Date(time);
+            var times = (inputTime - nowTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24) + 1; // 天
+            d = d < 10 ? '0' + d : d;
+            return '今天是2019年第' + d + '天';
+        }
+        console.log(getDayNum('2019-10-19 '));
+        //参考答案
+        function getDayNum(time) {
+            var nowTime = +new Date('2019-01-01 00:00:00');
+            var inputTime = +new Date(time);
+            var times = (inputTime - nowTime) / 1000;
+            var days = Math.floor(times / 60 / 60 / 24) + 1; // 天
+
+            return '今天是2019年第' + days + '天';
+        }
+        console.log(getDayNum('2019-10-19 '));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

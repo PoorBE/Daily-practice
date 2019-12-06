@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var day = prompt('请输入本月的日期(1~31)');
+        day = parseInt(day);
+        var week = day % 7;
+        switch (week) {
+            case 1:
+                alert(day + '号为星期一');
+                break;
+            case 2:
+                alert(day + '号为星期二');
+                break;
+            case 3:
+                alert(day + '号为星期三');
+                break;
+            case 4:
+                alert(day + '号为星期四');
+                break;
+            case 5:
+                alert(day + '号为星期五');
+                break;
+            case 6:
+                alert(day + '号为星期六');
+                break;
+            case 7:
+                alert(day + '号为星期天');
+                break;
+            default:
+                alert('6666');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

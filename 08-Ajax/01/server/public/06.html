@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取服务器端响应数据的另一种方式</title>
+</head>
+<body>
+    <script>
+        var xhr=new XMLHttpRequest()
+        console.log(xhr.readyState);
+        xhr.open('get','http://localhost:3000/readystate')
+        console.log(xhr.readyState);
+        xhr.onreadystatechange=function(){
+            console.log(xhr.readyState);
+            if(xhr.readyState==4 && xhr.status==20) {
+                console.log(xhr.responseText);
+                
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+</html>

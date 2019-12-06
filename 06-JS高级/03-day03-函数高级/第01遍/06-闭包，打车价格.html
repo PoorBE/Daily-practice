@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var car = (function() {
+            var start = 13;
+            var end = 0;
+            return {
+                price: function(n) {
+                    if (n <= 3) {
+                        end = start;
+                    } else {
+                        end = start + (n - 3) * 5
+                    }
+                    return end; ////////
+                },
+                yd: function(flag) {
+                    return flag ? end + 10 : end;
+                }
+            }
+        })()
+        console.log(car.price(5));
+        console.log(car.yd(true));
+    </script>
+</body>
+
+</html>

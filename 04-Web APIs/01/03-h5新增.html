@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <ul class="demo">
+        <li class="lis">123</li>
+        <li class="lis">456</li>
+        <li class="lis">789</li>
+    </ul>
+    <script>
+        var demo = document.querySelector('.demo').querySelectorAll('li');
+        console.log(demo[0]);
+        console.log(demo[2]);
+        var cs = document.getElementsByClassName('demo');
+        console.log(cs[0]);
+        console.log(cs[2]);
+    </script>
+</body>
+
+</html>

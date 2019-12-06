@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //键盘弹起 onkeyup
+        document.addEventListener('keyup', function() {
+                console.log('我弹起来了');
+            })
+            //键盘按下onkeydown 能识别功能键
+        document.addEventListener('keydown', function() {
+                console.log('我被按下了down');
+            })
+            //键盘按下onkeypress 不能能识别功能键
+        document.addEventListener('keypress', function() {
+                console.log('我也被按下了press');
+            })
+            //执行顺序duwn>prsee>up
+    </script>
+</body>
+
+</html>

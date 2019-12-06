@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            id: 1,
+            prise: 2000,
+            prname: "华为"
+        }
+        Object.defineProperty(obj, 'num', {
+            value: 1000,
+            enumerable: true //默认为false不能被遍历
+        })
+
+        Object.defineProperty(obj, "id", {
+            writable: false //false禁止修改属性，true可以修改
+        })
+        obj.id = 3;
+        console.log(obj);
+        Object.defineProperty(obj, 'address', {
+            value: '去玩儿无群二',
+            enumerable: false, //默认为false不能被遍历
+            configurable: false //默认为false不能被删除
+        })
+        console.log(obj);
+
+        console.log(Object.keys(obj));
+        delete obj.address;
+        delete obj.prise;
+        console.log(obj);
+    </script>
+</body>
+
+</html>

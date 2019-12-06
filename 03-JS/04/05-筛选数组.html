@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //将num数组中大于等于10的数组取出，形成一个新数组
+        var num = [2, 0, 10, 1, 77, 66, 55, 20, 0, 9, 22];
+        var arr = [];
+
+        for (var i = 0; i < num.length; i++) {
+            if (num[i] >= 10) {
+                arr[arr.length] = num[i];
+            }
+        }
+        console.log(arr);
+        //将ARR数组中的0去掉后，形成一个不含0的新数组；
+        var ARR = [2, 0, 10, 1, 77, 66, 55, 20, 0, 9, 22];
+        var zero = [];
+        for (var j = 0; j < ARR.length; j++) {
+            if (ARR[j] != 0) {
+                zero[zero.length] = ARR[j];
+            }
+        }
+        console.log(zero);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>小丑</div>
+    <div>小丑</div>
+    <div>小丑</div>
+    <div>小丑</div>
+    <div>小丑</div>
+    <div>小丑</div>
+    <ol>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ol>
+    <script>
+        $(function() {
+            //选择最后一个
+            $('div:last').css('color', 'blue')
+                //选择第一个
+            $('div:first').css('color', 'blue')
+                //选择指定的位置，从0开始
+            $('div:eq(3)').css('color', 'blue') //第四个
+            $('ol li:even').css('background', 'skyblue') //索引号为偶数的
+            $('ol li:odd').css('background', 'blue') //索引号为奇数的的
+        })
+    </script>
+</body>
+
+</html>

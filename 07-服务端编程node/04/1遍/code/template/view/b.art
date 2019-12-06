@@ -1,0 +1,24 @@
+
+<!-- 继承layout.art -->
+{{extend './common/layout.art'}} 
+
+
+{{block 'style'}} 
+    <style>
+        body{
+        background:green;
+        }
+    </style>
+{{/block}}
+      
+{{block 'main'}}
+{{include './common/header.art'}}
+<main>我是b页面的主体内容</main>
+{{include './common/footer.art'}}
+{{/block}}
+
+ {{block 'script'}}
+        <script>
+            console.log('我是b页面的js代码')
+        </script>
+ {{/block}}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //闭包的作用就是拓展变量的运用范围
+        function fun() {
+            var num = 10;
+            return function() {
+                console.log(num);
+            }
+        }
+        // var fun = function() {
+        //     var num = 10;
+        //     return function() {
+        //         console.log(num);
+        //     }
+        // }
+        var f = fun();
+        f();
+    </script>
+</body>
+
+</html>

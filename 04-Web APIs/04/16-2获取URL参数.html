@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <a href="16-获取URL参数.html">返回首页</a>
+    <script>
+        console.log(location.search);
+
+        var parmes = location.search.substr(1);
+        // console.log(parmes);
+        var arr = parmes.split('=');
+        // console.log(arr);
+        var div = document.querySelector('div');
+        div.innerHTML = arr[1] + '欢迎您的到来';
+    </script>
+</body>
+
+</html>

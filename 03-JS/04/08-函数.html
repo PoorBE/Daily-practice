@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var num1 = parseInt(prompt());
+        var num2 = parseInt(prompt());
+
+        function getSum(start, end) {
+            var sun = 0;
+            for (var i = start; i <= end; i++) {
+                sun += i;
+            }
+            alert(sun);
+        }
+        getSum(num1, num2);
+
+        function getNum(sun1, sun2) {
+            console.log(sun1 + sun2);
+
+        }
+        //当实参个数大于形参个数
+        getNum(1, 2, 3);
+        //当实参个数小于形参个数
+        getNum(1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

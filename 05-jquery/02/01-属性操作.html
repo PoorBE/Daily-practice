@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" value="woaini">
+    <div index="223" data-index="555"=""></div>
+    <script>
+        $(function() {
+            $("input").prop("value", "无情") //改变固有属性的值
+            console.log($("input").prop("value")); //获取固有属性值得方法
+
+            $("div").attr("index", "66666") //改变自定义属性的值
+            console.log($("div").attr("index")); //获取自定义属性的值
+            console.log($("div").attr("data-index")); //获取h5自定义属性的值
+
+        })
+    </script>
+</body>
+
+</html>

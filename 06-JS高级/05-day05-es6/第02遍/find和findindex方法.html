@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = [{
+            id: 1,
+            uanme: '狗蛋'
+        }, {
+            id: 2,
+            uanme: '狗剩'
+        }]
+        let p1 = person.find(item => item.id == 1);
+        console.log(p1);
+        let arr = [1, 15, 25, 35];
+        let arr1 = arr.findIndex(index => index > 15); //获取第一个符合条件元素的索引号
+        console.log(arr1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var str = '';
+        for (var i = 1; i <= 9; i++) {
+            for (j = i; j <= 9; j++) {
+                // 1×1=1
+                // str += j + '×' + i + '=' + i * j + '\t';
+                document.write(i + '×' + j + '=' + j * i + "&nbsp;&nbsp;&nbsp;&nbsp;");
+            }
+            // str += "\n"
+            document.write('<br/>')
+        }
+        console.log(str);
+        // var str = '';
+        // for (var i = 1; i <= 9; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         str += j + '×' + i + '=' + j * i + '\t';
+        //     }
+        //     str += '\n';
+        // }
+        // console.log(str);
+        // var str = 0;
+        // var average = 0;
+        // for (var i = 1; i <= 100; i++) {
+        //     str += i;
+        //     average = str / 100;
+        // }
+        // console.log(str, average);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

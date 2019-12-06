@@ -1,0 +1,135 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (min-width:750px) {
+    html {
+        font-size: 75px !important;
+    }
+}
+
+.search-content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 1.173333rem;
+    background-color: #FFC001;
+}
+
+.classify {
+    width: .586667rem;
+    height: .933333rem;
+    margin: .093333rem .266667rem .066667rem;
+    background: url(../images/classify.png) no-repeat;
+    background-size: .586667rem .933333rem;
+}
+
+.search {
+    flex: 1;
+}
+
+.search input {
+    outline: none;
+    width: 100%;
+    height: .88rem;
+    font-size: .32rem;
+    margin-top: .133333rem;
+    padding-left: .733333rem;
+    border: 0;
+    border-radius: .44rem;
+}
+
+.login {
+    width: 1rem;
+    height: .933333rem;
+    line-height: .933333rem;
+    text-align: center;
+    margin: .133333rem;
+    font-size: .32rem;
+    color: #FFF;
+}
+
+.banner {
+    width: 10rem;
+    height: 4.906667rem;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.ad {
+    display: flex;
+}
+
+.ad a {
+    flex: 1;
+}
+
+.ad a img {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a img {
+    width: 1.093333rem;
+    height: 1.093333rem;
+    margin: .133333rem 0 .266667rem;
+}
+
+nav a span {
+    font-size: .32rem;
+    color: black;
+}
+
+.ft-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 10rem;
+    height: 1.306667rem;
+    background-color: orange;
+    transform: translateX(-50%);
+}
+
+.ft-nav a {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ft-nav a img {
+    width: 1rem;
+    height: 1rem;
+    margin: .133333rem 0 .266667rem;
+}
+
+.ft-nav a span {
+    font-size: .32rem;
+    color: black;
+}

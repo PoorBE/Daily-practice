@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //利用RegExp对象创建正则
+        var regexp = new RegExp(/123/);
+        console.log(regexp);
+        //利用字面量创建正则
+        var rg = /123/;
+        //test校验字符串是否符合正则表达式的规范
+        console.log(rg.test('123'));
+        console.log(rg.test('abc'));
+    </script>
+</body>
+
+</html>

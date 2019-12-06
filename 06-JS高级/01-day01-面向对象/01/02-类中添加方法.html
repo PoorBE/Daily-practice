@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Star { //class里的函数不用加()
+            //属性
+            constructor(uname, age) {
+                    this.uname = uname;
+                    this.age = age;
+                }
+                //方法
+            sing(song) {
+                console.log(this.uname + this.age + "岁唱了" + song);
+
+            }
+        }
+        var ldh = new Star("刘德华", 18);
+        var zxy = new Star("张学友", 22);
+        // console.log(ldh.uname);
+        // console.log(zxy);
+        console.log("ლ(′◉❥◉｀ლ)");
+        ldh.sing("冰雨")
+        zxy.sing("你好毒")
+    </script>
+</body>
+
+</html>

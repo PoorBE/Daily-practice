@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>知否知否，应是绿肥红瘦</li>
+        <li>知否知否，应是绿肥红瘦</li>
+        <li>知否知否，应是绿肥红瘦</li>
+    </ul>
+    <ul id="uls">
+        <li>古道西风瘦马，断肠人在天涯</li>
+        <li>古道西风瘦马，断肠人在天涯</li>
+        <li>古道西风瘦马，断肠人在天涯</li>
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        //获取第二个ul里的li元素
+        var str = document.getElementById('uls');
+
+        var liss = str.getElementsByTagName('li'); //伪数组
+        console.log(typeof liss);
+
+        console.log(liss);
+        for (var i = 0; i < liss.length; i++) {
+            console.log(liss[i]);
+        }
+    </script>
+</body>
+
+</html>

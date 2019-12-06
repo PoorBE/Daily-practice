@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+    </ul>
+    <div class="qwer">嘻嘻嘻</div>
+    <script>
+        // 创建元素
+        var li = $("<li>2</li>")
+            // 内部添加元素
+        $("ul").append(li) //在后添加
+        $("ul").prepend(li) //在前添加
+            //外部添加元素
+        var div = $("<div>哈哈哈</div>")
+        $(".qwer").after(div) //在后添加
+        $(".qwer").before(div) //在后添加
+            // 3. 删除元素
+            // $("ul").remove(); 可以删除匹配的元素 自杀
+            // $("ul").empty(); // 可以删除匹配的元素里面的子节点 孩子
+        $("ul").html(""); // 可以删除匹配的元素里面的子节点 孩子
+    </script>
+</body>
+
+</html>

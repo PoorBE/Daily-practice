@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            background-color: yellow;
+            font-size: 20px;
+            padding: 0 20px;
+            border: 10px solid orange;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你我爱你</div>
+    <script>
+        var div = document.querySelector('div')
+            // scrollHeight不测量边框，测量padding
+        console.log(div.scrollHeight);
+        div.addEventListener('scroll', function() {
+            //鼠标滚动条触发事件
+            console.log(div.scrollTop); //向上隐藏的高度
+        })
+    </script>
+</body>
+
+</html>

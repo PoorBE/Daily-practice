@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function change(arr) {
+            var stem = [];
+            stem = arr[0];
+            arr[0] = arr[arr.length - 1];
+            arr[arr.length - 1] = stem;
+            return arr;
+        }
+        console.log(change(["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"]));
+
+        // var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+        function numMax() {
+            var stem = [];
+            stem = arguments[0];
+            arguments[0] = arguments[arguments.length - 1];
+            arguments[arguments.length - 1] = stem;
+            return arguments;
+
+        }
+        console.log(numMax("鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

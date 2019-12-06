@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1~100之间的数和的平均值
+        var num = 0;
+        var average = 0;
+        for (var i = 1; i <= 100; i++) {
+            num += i;
+        }
+        average = num / 100;
+        alert(average);
+        //1~100之间的偶数和和奇数和
+        var ou = 0;
+        var odd = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                ou += i;
+            } else {
+                odd += i;
+            }
+        }
+        alert(ou);
+        alert(odd);
+        //1~100之间能被4整除的数的和
+        var four = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 4 == 0) {
+                four += i;
+            }
+        }
+        alert(four);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

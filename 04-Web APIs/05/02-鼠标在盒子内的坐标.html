@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box')
+        box.addEventListener('mousemove', function(e) {
+            var x = e.pageX - this.offsetLeft //鼠标在页面中的坐标减去盒子的偏移即可得到鼠标在盒子中的坐标
+            var y = e.pageY - this.offsetTop
+            this.innerHTML = 'X坐标为' + x + ' Y坐标为' + y
+        })
+    </script>
+</body>
+
+</html>

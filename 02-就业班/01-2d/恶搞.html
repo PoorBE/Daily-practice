@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes haodong {
+            0% {}
+            30% {
+                transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            60% {
+                transform: scale(0.5);
+            }
+            80% {
+                transform: scale(0.1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+        
+        @keyframes xuanzhuan {
+            0% {
+                transform: rotate(2000deg)
+            }
+        }
+        
+        .box {
+            width: 250px;
+            height: 500px;
+            margin: 100px auto;
+            animation: xuanzhuan 15s linear infinite;
+        }
+        
+        .box img {
+            width: 100%;
+            animation: haodong 10s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"><img src="media/QQ图片20190926100944.jpg" alt=""></div>
+</body>
+
+</html>

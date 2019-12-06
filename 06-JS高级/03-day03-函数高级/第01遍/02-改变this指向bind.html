@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击123</button>
+    <button>点击123</button>
+    <button>点击123</button>
+    <script>
+        var btns = document.querySelectorAll("button");
+        console.log(btns);
+
+        //利用for循环给每个按钮绑定点击事件
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function() {
+        //         this.disabled = true;
+        //         setInterval(function() {
+        //             this.disabled = false; //这里的this指向windown
+        //         }.bind(this), 2000); //利用bind改变定时器函数的this指向btns
+        //     }
+        // }
+        btns.forEach(function(value, i) {
+            btns[i].onclick = function() {
+                this.disabled = true;
+                setInterval(function() {
+                    this.disabled = false;
+                }.bind(this), 2000)
+            }
+
+        })
+    </script>
+</body>
+
+</html>

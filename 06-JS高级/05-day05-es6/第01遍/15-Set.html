@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const arr = new Set([1, 1, 1, 2, 3]); //自动去除重复元素
+        // console.log(arr.size); //3
+        // const s1 = new Set(['a', 'a', 'b', 'c', 'c']);
+        // const ary = [...s1];
+        // console.log(ary);
+        var s2 = new Set();
+        s2 = s2.add('a').add('b');
+        console.log(s2);
+        s2.delete('a');
+        console.log(s2.size);
+        const r1 = s2.has('d');
+        console.log(r1);
+        //清空
+        s2.clear();
+        console.log(s2.size);
+
+        const s3 = new Set([1, 2, 3, 4, 5]);
+        s3.forEach(value => {
+            console.log(value);
+        })
+    </script>
+</body>
+
+</html>

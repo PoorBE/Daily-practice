@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y); //他只能用类构造函数自己的属性
+
+            }
+        }
+        class Son extends Father {
+            constructor(x, y) {
+                super(x, y) //将儿子的接到的属性给father
+            }
+        }
+        var son = new Son(2, 2); //实例化括号里要填实参
+        son.sum()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #E6EEF0;
+        }
+        
+        @keyframes shan {
+            0 {}
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+        
+        @keyframes nen {
+            0 {}
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+        
+        @keyframes xiong {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 1600px 0;
+            }
+        }
+        
+        @keyframes move {
+            0% {}
+            100% {
+                left: 50%;
+                transform: translateX(-50%)
+            }
+        }
+        
+        .shan {
+            height: 569px;
+            overflow: hidden;
+            background: url(media/bg2.png);
+            animation: shan 30s infinite linear;
+        }
+        
+        .shan .nen {
+            height: 336px;
+            margin-top: 200px;
+            background: url(media/bg1.png);
+            animation: nen 10s infinite linear;
+        }
+        
+        .xiong {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 200px;
+            height: 100px;
+            background: url(media/bear.png);
+            animation: xiong 0.8s steps(8) infinite, move 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shan">
+        <div class="nen"></div>
+    </div>
+    <div class="xiong"></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+  <style type="text/css">
+    .container {
+      padding-top: 60px;
+    }
+
+    .padding {
+      padding: 5px 0 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-group">
+      <label>请选择文件</label>
+      <input type="file" id="file" accept="image/*">
+      <div class="progress">
+        <div class="progress-bar" style="width: 0%;" id="bar">0%</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var file = document.getElementById('file');
+  var bar = document.getElementById('bar');
+	file.onchange = function(){
+		
+	}
+  </script>
+</body>
+
+</html>

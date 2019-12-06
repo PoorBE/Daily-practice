@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Hero(uname, type, blood, attack) {
+            this.姓名 = uname;
+            this.类型 = type;
+            this.血量 = blood;
+            this.attack = function(gongji) {
+                console.log(gongji);
+
+            }
+        }
+        var lp = new Hero('廉颇', '力量型', '500血量');
+        var hy = new Hero('后羿', '射手型', '100血量');
+        lp.attack('攻击方式：近战');
+        hy.attack('攻击方式：远程');
+        console.log(lp);
+        console.log(hy);
+        console.log(lp.姓名, hy.血量);
+
+
+        // function Star(uname, age, sex, sing) {
+        //     this.uname = uname;
+        //     this.age = age;
+        //     this.sex = sex;
+        //     this.sing = function() {
+        //         console.log();
+        //     }
+        // }
+        // var ldh = new Star('刘德华', 54, 'man');
+        // console.log(ldh.uname, ldh.sex, ldh.age);
+        // ldh.sing;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

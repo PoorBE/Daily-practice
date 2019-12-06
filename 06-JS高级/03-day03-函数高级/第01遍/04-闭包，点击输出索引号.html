@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>早知如此绊人心，何如当初莫相识</li>
+        <li>早知如此绊人心，何如当初莫相识</li>
+        <li>早知如此绊人心，何如当初莫相识</li>
+        <li>早知如此绊人心，何如当初莫相识</li>
+    </ul>
+    <script>
+        var lis = document.querySelector("ul").querySelectorAll('li')
+        for (var i = 0; i < lis.length; i++) {
+            (function(sum) { //sum为形参，接收实参
+                lis[sum].addEventListener("click", function() {
+                    console.log(sum);
+                })
+            })(i); //这里的i是实参
+        }
+    </script>
+</body>
+
+</html>

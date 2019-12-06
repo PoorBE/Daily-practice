@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //大马驮2石粮食，中马驮1石粮食，两头小马驮一石粮食，要用100匹马，驮100石粮食，该如何调配？
+        for (var a = 0; a <= 50; a++) {
+            for (var b = 0; b <= 100; b++) {
+                var c = 100 - a - b;
+                if (100 == a + b + c && a * 2 + b + c / 2 == 100)
+                    document.write("大马：" + a + "中马：" + b + "小马：" + c + "<hr />");
+            }
+        }
+    </script>
+</body>
+
+</html>

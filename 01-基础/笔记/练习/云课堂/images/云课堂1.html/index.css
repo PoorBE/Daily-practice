@@ -1,0 +1,224 @@
+/*头部开始*/
+
+.header {
+    background-color: #262626;
+    height: 60px;
+}
+.header img {
+    margin-top: 10px;
+    margin-right: 70px;
+}
+.header .header2 {
+    height: 60px;
+}
+.header .header2 li {
+    height: 60px;
+    line-height: 60px;
+}
+.header .header2 li a {
+    padding: 0 20px;
+    color: white;
+}
+.header .header1 .header1-1 {
+    height: 26px;
+    line-height: 60px;
+    margin-left: 280px;
+}
+.header .header1 .header1-1 a {
+    width: 41px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid #ff6400;
+    padding: 6px 8px;
+    color: #ff6400;
+}
+.header .header1 .header1-2 {
+    width: 43px;
+    height: 30px;
+    background-color: #ff6400;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.header .header1 .header1-2 a {
+    margin-left: 7px;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+}
+/*头部结束*/
+
+.banner {
+    height: 440px;
+    background: url(../banner.jpg) center;
+}
+/*banner结束*/
+
+/*项目1开始*/
+
+.xiangmu1 {
+    padding: 79px 30px;
+    height: 423px;
+    box-sizing: border-box;
+}
+.xiangmu1 .xiangmu1a, .xiangmu1 .xiangmu1b {
+    margin-top: 120px;
+}
+.xiangmu1 .xiangmu1c li {
+    margin-left: 8px;
+}
+.xiangmu1 .xiangmu1c h2 {
+    margin-left: 126px;
+    margin-bottom: 14px;
+    font-size: 30px;
+}
+/*项目1结束*/
+
+/*项目2开始*/
+
+.xiangmu2 {
+    height: 540px;
+    background-color: #f2f2f2;
+}
+.xiangmu2 .xiangmu2c .xiangmu2a {
+    margin-right: 12px;
+}
+.xiangmu2 .xiangmu2c h2 {
+    font-size: 28px;
+    margin-top: 80px;
+    margin-bottom: 12px;
+}
+.xiangmu2 .xiangmu2b {
+    background-color: #fff;
+    width: 385px;
+    height: 344px;
+    position: relative;
+}
+.xiangmu2 .xiangmu2b h3 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.xiangmu2 .xiangmu2b span {
+    position: absolute;
+    left: 290px;
+    bottom: 108px;
+    font-size: 20px;
+    color: orange;
+}
+.xiangmu2 .xiangmu2b img {
+    margin-bottom: 10px;
+}
+.xiangmu2 .xiangmu2b .xiangmu2b-1 {
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.xiangmu2 .xiangmu2b .xiangmu2b-2 {
+    font-size: 12px;
+    position: absolute;
+    left: 200px;
+    bottom: 17px;
+}
+.xiangmu2 .xiangmu2b .xiangmu2b-4 {
+    position: absolute;
+    left: 300px;
+    bottom: 12px;
+}
+.xiangmu2 .xiangmu2d {
+    margin-bottom: 10px;
+}
+.xiangmu2 .xiangmu2a {
+    border: 1px solid #ccc;
+}
+/*项目2结束*/
+
+/*项目3开始*/
+
+.xiangmu3 {
+    height: 540px;
+    background-color: #fff;
+}
+.xiangmu3 .xiangmu2c .xiangmu2a {
+    margin-right: 12px;
+}
+.xiangmu3 .xiangmu2c h2 {
+    font-size: 28px;
+    margin-top: 80px;
+    margin-bottom: 12px;
+}
+.xiangmu3 .xiangmu2b {
+    background-color: #fff;
+    width: 385px;
+    height: 344px;
+    position: relative;
+}
+.xiangmu3 .xiangmu2b h3 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.xiangmu3 .xiangmu2b span {
+    position: absolute;
+    left: 290px;
+    bottom: 108px;
+    font-size: 20px;
+    color: orange;
+}
+.xiangmu3 .xiangmu2b img {
+    margin-bottom: 10px;
+}
+.xiangmu3 .xiangmu2b .xiangmu2b-1 {
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.xiangmu3 .xiangmu2b .xiangmu2b-2 {
+    font-size: 12px;
+    position: absolute;
+    left: 200px;
+    bottom: 17px;
+}
+.xiangmu3 .xiangmu2b .xiangmu2b-4 {
+    position: absolute;
+    left: 300px;
+    bottom: 12px;
+}
+.xiangmu3 .xiangmu2a {
+    border: 1px solid #ccc;
+}
+/*项目3结束*/
+
+/*项目4开始*/
+
+.xiangmu4 {
+    height: 179px;
+    background-color: #304363;
+    padding: 31px 73px 33px 76px;
+    box-sizing: border-box;
+}
+.xiangmu4 .xiangmu4a ul, .xiangmu4 .xiangmu4a h3 {
+    margin-right: 130px;
+}
+.xiangmu4 .xiangmu4a h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+.xiangmu4 .xiangmu4a li {
+    color: #fff;
+}
+/*项目4结束*/
+
+/*页尾开始*/
+
+.yewei {
+    height: 40px;
+    background-color: #1b2435;
+}
+.yewei .yewei1 p {
+    line-height: 40px;
+    color: #aebece;
+    x`
+}
+/*页尾结束*/

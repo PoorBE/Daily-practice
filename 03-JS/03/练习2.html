@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //小明单位发了100元的购物卡，小明到超市买三类洗化用品，洗发水（15元），香皂（2元），牙刷（5元）。要把100元整好花掉，可如有哪些购买结合？
+        for (var a = 0; a <= 50; a++) {
+            for (var b = 0; b <= 20; b++) {
+                var c = (100 - 2 * a - 5 * b) / 15;
+                if (c >= 0 && 100 == 2 * a + 5 * b + parseInt(c) * 15) {
+                    document.write("香皂" + a + "牙刷" + b + "洗发水" + parseInt(c) + "<hr />");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

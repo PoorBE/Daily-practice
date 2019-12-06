@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function(a, b) {
+            console.log(a + b);
+
+        }(5, 6));
+        //两个不同的立即执行函数，需用；隔开
+        (function(c, d) {
+            console.log(c * d);
+
+        })(5, 5)
+        //立即执行，能单独生成一个作用域，避免命名冲突
+    </script>
+</body>
+
+</html>

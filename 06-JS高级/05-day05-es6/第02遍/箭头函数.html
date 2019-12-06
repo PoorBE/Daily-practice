@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //() => {} //()：代表是函数； =>：必须要的符号，指向哪一个代码块；{}：函数体
+        // const fn = () => {} 代表把一个函数赋值给fn
+
+        //普通写法
+        function sum(sum1, sum2) {
+            return sum1 + sum2;
+        }
+        console.log(sum(1, 2));
+        //箭头函数写法
+        // const fn = (sum1, sum2) => {
+        //         return sum1 + sum2;
+        //     }
+        //简写
+        const fn = (sum1, sum2) => sum1 + sum2;
+        console.log(fn(5, 5));
+    </script>
+</body>
+
+</html>

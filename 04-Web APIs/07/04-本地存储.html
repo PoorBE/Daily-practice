@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button class="add">存储</button>
+    <button class="huo">获取</button>
+    <button class="del">删除</button>
+    <button class="qing">清空</button>
+    <script>
+        var ipt = document.querySelector('input')
+        var add = document.querySelector('.add')
+        var huo = document.querySelector('.huo')
+        var del = document.querySelector('.del')
+        var qing = document.querySelector('.qing')
+            //存储
+        add.addEventListener('click', function() {
+                var val = ipt.value
+                sessionStorage.setItem('username', val)
+                sessionStorage.setItem('pws', val)
+            })
+            //获取
+        huo.addEventListener('click', function() {
+                console.log(sessionStorage.getItem('username'));
+                console.log(sessionStorage.getItem('pws'));
+            })
+            //删除
+        del.addEventListener('click', function() {
+                sessionStorage.removeItem('username')
+            })
+            //清空
+        qing.addEventListener('click', function() {
+            sessionStorage.clear()
+        })
+    </script>
+</body>
+
+</html>

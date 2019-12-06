@@ -1,0 +1,210 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.app {
+    height: 45px;
+}
+
+.app ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(1) img {
+    width: 10px;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(2) img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #F63515;
+}
+
+.search-wrap {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    height: 44px;
+}
+
+.search-btn,
+.search-login {
+    position: absolute;
+    top: 0;
+    height: 44px;
+    width: 40px;
+}
+
+.search-btn {
+    left: 0;
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    margin: 14px 0 0 15px;
+    background: url(../img/s-btn.png);
+    background-size: 20px 18px;
+}
+
+.search-login {
+    right: 0;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+}
+
+.search {
+    position: relative;
+    margin: 8px 50px 0;
+    height: 30px;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.jd-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 20px;
+    height: 15px;
+    background: url(../img/jd.png);
+    background-size: 20px 15px;
+}
+
+.jd-icon:after {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    content: "";
+    display: block;
+    height: 15px;
+    width: 1px;
+    background-color: #333;
+}
+
+.sou {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+    background: url(../img/jd-sprites.png) -82px 0;
+    background-size: 200px auto;
+}
+
+.search input {
+    position: relative;
+    top: 0;
+    left: 74px;
+    box-sizing: border-box;
+    width: 320px;
+    height: 30px;
+    outline: 0;
+    border: 0;
+    border-radius: 15px;
+}
+
+.main-centent img {
+    width: 100%;
+}
+
+.brand {
+    width: 100%;
+    overflow: hidden;
+}
+
+.brand img {
+    float: left;
+    width: 33.3%;
+}
+
+.nav {
+    width: 100%;
+    background-color: pink;
+}
+
+.nav a {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    height: 81px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.nav a img {
+    width: 40px;
+    margin: 8px 0;
+}
+
+.nav a span {
+    display: block;
+    color: #666;
+}
+
+.news {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.news a {
+    float: left;
+    box-sizing: border-box;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
+
+.news a img {
+    width: 100%;
+}

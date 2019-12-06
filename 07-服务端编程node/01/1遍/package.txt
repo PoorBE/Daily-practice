@@ -1,0 +1,8 @@
+1.快速安装卸载
+    npm i query  / npm uni query
+
+2.开发依赖和项目依赖
+    安装：--save-dev
+    拷贝：npm i --production
+3.快速执行命令
+    scripts属性中，所有命令都可以通过：npm run + 属性

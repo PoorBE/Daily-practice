@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>dianwo</button>
+    <div>123</div>
+    <p>123</p>
+    <script>
+        var time = new Date(); //当前时间
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.onclick = function() {
+            div.innerHTML = time;
+        }
+
+        function getDate() { //当前时间封装函数
+            var date = new Date();
+            return date;
+        }
+        var p = document.querySelector('p');
+        p.innerHTML = getDate();
+    </script>
+</body>

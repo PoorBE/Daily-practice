@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var reg = /abc/; //只要有连串的abc就为true
+        console.log(reg.test('abc')); //true
+        console.log(reg.test('aabc')); //true
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var reg1 = /[abc]/; //只要有abc任意一个字符就为true
+        console.log(reg1.test('a')); //true
+        console.log(reg1.test('abd')); //true
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var reg = /^abc$/; //必须以a为开头，以c为结尾的abc才为true
+        console.log(reg.test('abc')); //true
+        console.log(reg.test('aabc')); //false
+        console.log(reg.test('abcabc')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var reg1 = /^[abc]$/; //只有一个字符，而且必须abc中的字符
+        console.log(reg1.test('b')); //true
+        console.log(reg1.test('abd')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var abc = /^[A-Za-z-9_-]$/; //为A-Z a-z 0-9 或_或-一个字符为true
+        console.log(abc.test('-')); //true
+        console.log(abc.test('@')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var abc = /^[^A-Za-z-9_-]$/; //^为取反，为除了A-Z a-z 0-9 或_或-一个字符为true
+        console.log(abc.test('-')); //false
+        console.log(abc.test('@')); //true
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe = /^a*$/; //*为大于等于0为true
+        console.log(qwe.test('')); //true
+        console.log(qwe.test('aaaaa')); //true
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe = /^a+$/; //*为大于等于1为true
+        console.log(qwe.test('')); //false
+        console.log(qwe.test('aaaaa')); //true
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe1 = /^a?$/; //?为0或1才为true
+        console.log(qwe1.test('a')); //true
+        console.log(qwe1.test('aaaaa')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe1 = /^a{2}$/; //{n}大于等于n才为true
+        console.log(qwe1.test('aa')); //true
+        console.log(qwe1.test('a')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe1 = /^a{2}$/; //{n}等于n才为true
+        console.log(qwe1.test('aa')); //true
+        console.log(qwe1.test('aaa')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe1 = /^a{2,}$/; //{n,}大于等于n才为true
+        console.log(qwe1.test('aaa')); //true
+        console.log(qwe1.test('a')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+
+        var qwe1 = /^a{2,6}$/; //{n,num}大于等于n切小于等于num才为true
+        console.log(qwe1.test('aaa')); //true
+        console.log(qwe1.test('a')); //false
+        console.log(qwe1.test('aaaaaaa')); //false
+        console.log('~~~~~~~~~~~~~~~~~~');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    /* flexible 给我们划分了 10 等份 */
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+
+/* 如果我们的屏幕超过了 750px  那么我们就按照 750设计稿来走 不会让我们页面超过750px */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+header {
+    height: 5.133333rem;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+.local-nav {
+    display: flex;
+    padding: .4rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.local-nav li a {
+    display: inline-block;
+    width: 2.8rem;
+    background-color: #fddf00;
+    border-radius: .4rem;
+    font-size: .346667rem;
+    color: black;
+}
+
+.local-nav li a:hover {
+    background-color: #003a9b;
+    color: #fff;
+}
+
+.remd {
+    padding: 0 .4rem;
+}
+
+.remd h2 {
+    display: inline-block;
+    font-size: .52rem;
+}
+
+.remd span {
+    font-size: .293333rem;
+    margin-left: .266667rem;
+    color: #999999;
+}
+
+.remd-bd {
+    margin-top: .533333rem;
+    display: flex;
+    height: 4.133333rem;
+    justify-content: space-between;
+}
+
+.remd-bd li {
+    height: 4.36rem;
+    border: .013333rem solid #ccc;
+    border-radius: .2rem;
+}
+
+.remd-bd li:hover img {
+    transform: scale(1.5);
+}
+
+.remd-bd a {
+    overflow: hidden;
+    display: inline-block;
+    width: 2.773333rem;
+    background-color: #fff;
+    border: .013333rem solid @ccc;
+}
+
+.remd-bd i {
+    display: inline-block;
+    width: .56rem;
+    height: .4rem;
+    margin: .2rem;
+}
+
+.remd-bd i img {
+    width: 100%;
+    height: 100%;
+}
+
+.remd-bd h2 {
+    margin: 0 .2rem 0;
+    color: #000;
+    font-size: .293333rem;
+    font-weight: 500;
+}
+
+.money {
+    position: relative;
+    width: 2.24rem;
+    height: .493333rem;
+    line-height: .493333rem;
+    margin: .066667rem .2rem .173333rem;
+    font-size: .293333rem;
+    color: #e4007b;
+}
+
+.money::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: .64rem;
+    height: .493333rem;
+    background: url(../img/产品购物车.png) no-repeat;
+    background-size: .64rem .493333rem;
+}
+
+.chanping {
+    margin-top: .533333rem;
+    display: flex;
+    flex-wrap: wrap;
+    height: 4.133333rem;
+    justify-content: space-between;
+}
+
+.chanping li {
+    height: 6rem;
+    border: .013333rem solid #ccc;
+    border-radius: .2rem;
+    margin-bottom: .266667rem;
+}
+
+.chanping li:hover img {
+    transform: scale(1.5);
+}
+
+.chanping a {
+    overflow: hidden;
+    display: inline-block;
+    width: 4.266667rem;
+}
+
+.chanping i {
+    display: inline-block;
+    width: .56rem;
+    height: .4rem;
+    margin: .333333rem;
+}
+
+.chanping i img {
+    width: 100%;
+    height: 100%;
+}
+
+.chanping h2 {
+    margin: 0 .506667rem 0 .333333rem;
+    color: #000;
+    font-size: .293333rem;
+    font-weight: 500;
+}
+
+.m2 {
+    position: relative;
+    width: 2.24rem;
+    height: .493333rem;
+    line-height: .493333rem;
+    margin: .066667rem .333333rem .333333rem;
+    font-size: .293333rem;
+    color: #e4007b;
+}
+
+.m2::before {
+    position: absolute;
+    right: -1.333333rem;
+    top: 0;
+    content: "";
+    display: block;
+    width: .64rem;
+    height: .493333rem;
+    background: url(../img/产品购物车.png) no-repeat;
+    background-size: .64rem .493333rem;
+}

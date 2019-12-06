@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nam = `张三`;
+        var sayhi = `我的名字叫${nam}`;
+        console.log(sayhi);
+
+        let result = {
+            name: 'zhangsna',
+            age: 20
+        }
+        let text = `
+                 <div>
+                    <span>${result.name}</span>
+                    <span>${result.age}</span>                   
+                </div>`;
+        console.log(text);
+
+        const fn = () => {
+            return '我是函数'
+        }
+        let html = `我是模板字符串${fn()}`;
+        console.log(html);
+    </script>
+</body>
+
+</html>

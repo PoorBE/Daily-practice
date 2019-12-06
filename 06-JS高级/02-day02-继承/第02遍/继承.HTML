@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Father(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        Father.prototype.sing = function() {
+            console.log('woaini');
+
+        }
+
+        function Son(uname, age, score) {
+            Father.call(this, uname, age)
+            this.score = 100;
+        }
+        Son.prototype = new Father();
+        Son.prototype.constructor = Son;
+        var ldh = new Son("柳大华", 15)
+        console.log(ldh);
+        ldh.sing()
+    </script>
+</body>
+
+</html>

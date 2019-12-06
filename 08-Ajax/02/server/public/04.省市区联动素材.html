@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>搜索框输入文字自动提示</title>
+	<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+		.container {
+			padding-top: 150px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="form-inline">
+			<div class="form-group">
+				<select class="form-control" id="province">
+					
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" id="city">
+					<option>请选择城市</option>
+				
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" id="area">
+					<option>请选择县城</option>
+			
+				</select>
+			</div>
+		</div>
+	</div>
+	<script src="/js/ajax.js"></script>
+	<script src="/js/template-web.js"></script>
+	<!-- 省份模板 -->
+	<script type="text/html" id="shengfen">  
+		<option>请选择省份</option>
+		{{each list}}
+		<option value="{{$value.id}}">{{$value.name}}</option>
+		{{/each}}
+	</script>
+	<!-- 城市模板 -->
+	<script type="text/html" id="chengshi">  
+		
+		{{each list}}
+		<option value="{{$value.id}}">{{$value.name}}</option>
+		{{/each}}
+	</script>	
+	<!-- 区模板 -->
+	<script type="text/html" id="qv">  
+		
+		{{each list}}
+		<option value="{{$value.id}}">{{$value.name}}</option>
+		{{/each}}
+	</script>
+	<script>
+		var province = document.getElementById('province');
+		var city = document.getElementById('city');
+		var area = document.getElementById('area');
+		ajax({
+			type:'get',
+			url:'http://localhost:3000/province',
+			success:function(res){
+				var html=template('shengfen',{list:res})
+				province.innerHTML=html
+			}
+		})
+			// 为输入框绑定改变事件
+		province.onchange=function() {
+				// 获取id值
+				var id=this.value
+			
+				ajax({
+					type:'get',
+					url:'/cities',
+					data: {
+						id
+					},
+					success:function(res) {
+					var html=template('chengshi',{list:res})
+						city.innerHTML=html
+						area.innerHTML='<option>请选择县城</option>'
+					}
+				})
+			}
+		city.onchange=function(){
+			var id=this.value
+			ajax({
+				type:'get',
+				url:'/areas',
+				data:{
+					id
+				},
+				success:function(res){
+					var html=template('qv',{list:res})
+						area.innerHTML=html
+				}
+			})
+		}
+	</script>
+</body>
+
+</html>

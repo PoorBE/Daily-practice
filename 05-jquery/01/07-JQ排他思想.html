@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+</head>
+
+<body>
+    <button>666</button>
+    <button>666</button>
+    <button>666</button>
+    <button>666</button>
+    <button>666</button>
+    <button>666</button>
+    <button>666</button>
+    <button>666</button>
+</body>
+<script>
+    $(function() { //隐式迭代给所有button绑定点击事件
+        $("button").click(function() {
+            //当前元素变化背景颜色
+            // $(this).css("background", "yellow")
+            //     //其余兄弟去掉背景颜色
+            // $(this).siblings("button").css("background", "")
+            //链式编程
+            $(this).css("background", "red").siblings().css("background", "blue")
+                //我的背景颜色变为红色，我的兄弟变成蓝色
+        })
+    })
+</script>
+
+</html>

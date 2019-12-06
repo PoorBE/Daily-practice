@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head> 
+<body>
+    <input type="file" name="" id="qwer">
+    <img src="" alt="" class="qwer">
+    <script>
+        $(function(){
+            $('#qwer').on('change',function(){
+                // this--->input
+                //构造文件读取对象
+                var reader=new FileReader()
+            //  this.files读取的文件对象列表
+                // files[0]---->只选择一个文件
+                // reader.readAsText(this.files[0])//异步 这个方法一般只能用来读取纯文件类型 比如txt json，js，xss，html
+                reader.readAsDataURL(this.files[0])
+                reader.onload=function(){
+                    $('.qwer').attr('src',reader.result)
+                }
+                
+                
+            })
+        })
+    </script>
+</body>
+</html>

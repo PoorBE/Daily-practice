@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+        var random = getRandom(1, 50);
+        var i = 1;
+        while (i <= 10) {
+            var num = prompt('这是您第' + i + '此，您还有' + (10 - i) + '次机会');
+            if (i == 10) {
+                alert('对不起，您机会用完了，请重新开始')
+            } else if (num > random) {
+                alert('猜的数大了');
+            } else if (num < random) {
+                alert('猜的数小了');
+            } else {
+                alert('恭喜你，猜对了');
+                break;
+            }
+            i++;
+        }
+    </script>
+</body>
+
+</html>

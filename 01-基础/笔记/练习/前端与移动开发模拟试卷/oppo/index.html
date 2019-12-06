@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		.w {
+			width: 1178px;
+			margin: 0 auto;
+		}
+		.fl {
+			float: left;
+		}
+		.fr {
+			float: right;
+		}
+		a {
+			text-decoration: none;
+		}
+		/*<!-- header开始 -->*/
+		.nav {
+			height: 28px;
+			background-color: #009b72;
+		}
+		.user a {
+			float:left;
+			height: 28px;
+			width: 66px;
+			line-height: 28px;
+			text-align: center;
+			font-size: 14px;
+			color: white;
+			border-left: 1px solid #47b488;
+		}
+		.user a:hover {
+			background-color: green;
+		}
+		.header {
+			height: 78px;
+		}
+		.logo a {
+			float: left;
+			width: 154px;
+			height: 78px;
+			margin-top: 11px;
+			background: url(images/oppologo.png) no-repeat;
+		}
+		.logo h1 {
+			text-indent: -9999px;
+		}
+		.navigation{
+			margin-right: 88px;
+		}
+		.navigation ul li {
+			margin-top: 21px;
+			float: left;
+		}
+		.navigation  li a {
+			display:block;
+			height: 30px;
+			margin: 0 23px; 
+			line-height: 30px;
+			font-size:14px;
+			color: #7b7b7b;
+		}
+		.navigation  li a:hover {
+			border-bottom: 2px solid #2aad6f;
+		}
+		.gouwu{
+			position: relative;
+			margin-top: 21px;
+		}
+		.gouwu a {
+			display: block;
+			float: right;
+			width: 30px;
+			height: 28px;
+			background: url(images/sprit.png) no-repeat ;
+			background-position: -128px -151px;
+		}
+		.gouwu span {
+			float: right;
+			position: absolute;
+			height: 29px;
+			width: 29px;
+			border-radius: 50%;
+		}
+		/*header结束*/
+		.zhongbu {
+			height: 568px;
+		}
+		.zhongbu img {
+			width:100%;
+			height: 100%;
+		}
+		.main_hd {
+			width: 1200px;
+			margin-top: 80px;
+			overflow: hidden;
+		}
+		.main_hd li {
+			position: relative;
+			float: left;
+			width: 294px;
+			height: 470px;
+			text-align: center;
+			border:1px solid #e0e0e0;
+		}
+		.main_hd .oppo {
+			width: 180px;
+			height:219px;
+			padding-top: 103px; 
+		}
+		.main_hd li p {
+			height: 72px;
+			line-height: 72px;
+			font-size: 14px;
+		}
+		.main_hd li span {
+			height: 56px;
+			line-height: 56px;
+			font-weight: 700;
+			color: #1f8657;
+		}
+		.hot {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 62px;
+			height: 68px;
+		}
+		.footer {
+			height: 500px;
+			margin-top: 70px;
+			background-color: #f6f6f6;
+		}
+		.mite {
+			float: left;
+			height: 128px;
+			margin-top: 25px;
+			background-color: pink;
+		}
+		.mite li {
+			float: left;
+			height: 128px;
+			width: 235px;
+			background: url(images/services.png) no-repeat;
+		}
+		 .mite .mite_bao {
+			background-position: -233px 0;
+		}
+		.mite .mite_lian {
+			background-position: -476px 0;
+		}
+		.mite .mite_quan {
+			background-position: -706px 0;
+		}
+		.mite .mite_shou {
+			background-position: -919px 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- header开始 -->
+	<div class="nav">
+		<div class="w">
+			<div class="user fr">
+				<a href="#">登录</a>
+				<a href="#">注册</a>
+				<a href="#">Global</a>
+			</div>
+		</div>
+	</div>
+	<div class="header w">
+		<div class="logo fl">
+			<h1><a href="#" title="OPPO">oppo</a></h1>
+		</div>
+		<div class="gouwu fr">
+				<a href="#"></a><span></span>
+		</div>
+		<div class="navigation fr">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">产品</a></li>
+				<li><a href="#">商城</a></li>
+				<li><a href="#">体验店</a></li>
+				<li><a href="#">服务</a></li>
+				<li><a href="#">colors</a></li>
+				<li><a href="#">社区</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<!-- header结束 -->
+	<div class="zhongbu">
+		<img src="images/Router.jpg" alt="">
+	</div>
+	<div class="main_hd w">
+		<ul>
+			<li>
+				<img src="images/ribbon-icon-cheap.png" alt="" class="hot">
+				<img src="images/oppo1.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/ribbon-icon-cheap.png" alt="" class="hot">
+				<img src="images/oppo2.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/oppo3.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/oppo4.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/ribbon-icon-new.png" alt="" class="hot">
+				<img src="images/oppo5.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/ribbon-icon-new.png" alt="" class="hot">
+				<img src="images/oppo6.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/oppo7.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/oppo8.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="main_hd w">
+		<ul>
+			<li>
+				<img src="images/other1.jpg" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/other2.jpg" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/other3.jpg" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/other4.jpg" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/other5.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/ribbon-icon-new.png" alt="" class="hot">
+				<img src="images/other6.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/ribbon-icon-new.png" alt="" class="hot">
+				<img src="images/other7.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			<li>
+				<img src="images/other8.png" alt="" class="oppo">
+				<p>R9s 玫瑰金 前后1600万像素</p><span>￥2799.00</span>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="footer">
+		<div class="w">
+			<div class="mite">
+				<ul>
+					<li></li>
+					<li class="mite_bao"></li>
+					<li class="mite_lian"></li>
+					<li class="mite_quan"></li>
+					<li class="mite_shou"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var arr = ['关羽', '张飞', '赵云', '马超', '黄忠', '魏延', '姜维'];
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i]);
+            document.write('<br/>');
+
+        }
+        //取出ARR中能被五整除的元素，给新数组num
+        var ARR = [5, 25, 35, 45, 77, 2, 3, 6, 55, 5];
+        var num = [];
+        for (var i = 0; i < ARR.length; i++) {
+            if (ARR[i] % 5 == 0) {
+                num[num.length] = ARR[i];
+            }
+        }
+        document.write('该数组能被5整除的数有' + num);
+        document.write('<br/>')
+            //取出ARR中最小的元素，给新数组min
+        var min = ARR[0];
+        for (var i = 0; i < ARR.length; i++) {
+            if (ARR[i] < min) {
+                min = ARR[i];
+            }
+        }
+        document.write('该数组最小值为' + min);
+        //冒泡排序
+        var str = [5, 25, 35, 45, 77, 2, 3, 6, 55, 5];
+        for (var i = 0; i < str.length - 1; i++) {
+            for (var j = 0; j < str.length - i - 1; j++) {
+                var set = [];
+                if (str[j] > str[j + 1]) {
+
+                    set = str[j];
+                    str[j] = str[j + 1];
+                    str[j + 1] = set;
+
+                }
+            }
+
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

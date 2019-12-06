@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //documents
+        // function fn() {
+        //     // console.log(arguments.length);
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         console.log(arguments[i]);
+        //         document.write(arguments[i] + '<br/>');
+
+        //     }
+        // }
+        // fn('a', 'b', 'b');
+        // fn(1, 2, 3, 4);
+        //arguments求形参最大值
+        // function numMax() {
+        //     var max = arguments[0];
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         if (arguments[i] > max) {
+        //             max = arguments[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // console.log(numMax(1, 5, 6, 7));
+        // console.log(numMax(55, 5, 6, 7));
+        // console.log(numMax(1, 5, 66, 7));
+        // //arguments进行翻转
+        // function reversal() {
+        //     var newArr = [];
+        //     for (var i = arguments.length - 1; i >= 0; i--) {
+        //         newArr[newArr.length] = arguments[i];
+        //     }
+        //     return newArr;
+        // }
+        // console.log(reversal(1, 2, 3, 4, 5));
+        //arguments冒泡排序
+        // function sort() {
+
+        //     for (var i = 0; i < arguments.length - 1; i++) {
+        //         for (var j = 0; j < arguments.length - i - 1; j++) {
+        //             if (arguments[j] > arguments[j + 1]) {
+        //                 var set = arguments[j];
+        //                 arguments[j] = arguments[j + 1];
+        //                 arguments[j + 1] = set;
+        //             }
+        //         }
+        //     }
+        //     return arguments;
+        // }
+        // console.log(sort(5, 4, 3, 5, 8));
+        // console.log(sort(2, 5, 81, 7, 6, 2, 33, 5, 3, 6, 5, 7, 8));
+        // 利用函数判断闰年；
+        // function runYear(year) {
+        //     var flog = false;
+        //     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        //         flog = true;
+        //     }
+        //     return flog;
+        // }
+        // console.log(runYear(2001));
+        function isRunYear(year) {
+            var flat = false;
+            if (year % 4 == 0 && year % 100 !== 0 || year % 400 == 0) {
+                flat = true;
+            }
+            return flat;
+        }
+        console.log(isRunYear(2000));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

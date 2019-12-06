@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes xian {
+            0% {}
+            100% {
+                transform: translateY(107px)
+            }
+        }
+        
+        .box {
+            position: relative;
+            width: 145px;
+            height: 287px;
+            margin: 50px;
+            background: url(media/index_z_71df05e.png);
+        }
+        
+        .box-bd {
+            position: absolute;
+            top: 45px;
+            left: 19px;
+            width: 107px;
+            height: 107px;
+        }
+        
+        .box-bd img {
+            width: 100%;
+        }
+        
+        .xian {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            animation: xian 2s linear infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="box-bd">
+            <img src="media/57b280b496dee47507111c56NRN73rVj.png" alt="">
+            <div class="xian"><img src="media/line_dd0b705.png" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="qwer" index='123'></div>
+    <script>
+        var div = document.querySelector('div');
+        //获取属性值
+        console.log(div.id); //只能获取内置的属性的值
+        console.log(div.index); //underfined
+        console.log(div.getAttribute('id')); //getAttribute能获取自定义属性和内置属性
+
+        console.log(div.getAttribute('index'));
+
+        //改变属性值
+        //自带属性  赋值
+        div.id = 'df';
+        div.className = 'change'
+            //自定义属性setAttribute('属性','值')
+        div.setAttribute('index', '456')
+        div.setAttribute('class', '456') //改变class属性，用class而非className
+
+        //移除属性
+        div.removeAttribute('index');
+    </script>
+</body>
+
+</html>

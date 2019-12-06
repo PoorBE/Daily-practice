@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //箭头函数不绑定this关键字，箭头函数中的this，指向的是函数定义位置的上下文this
+        const obj = {
+            name: '张三'
+        };
+
+        function fn() {
+            console.log(this); //this指向是obj对象
+            return () => {
+                console.log(this); //this指向是箭头函数定义的位置，那么这个箭头函数定义在fn中，而这个fn指向obj对象，所以这个this也指向是obj对象
+            }
+        }
+        const resFn = fn.call(obj);
+        resFn()
+    </script>
+</body>
+
+</html>

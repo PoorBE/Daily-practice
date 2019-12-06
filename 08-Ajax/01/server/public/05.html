@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>向服务器端传递JSON格式的请求参数</title>
+</head>
+<body>
+
+    <script>
+    // 创建阿贾克斯对象
+    var xhr=new XMLHttpRequest()
+    //告诉阿贾克斯请求方式和请求地址
+    // 1).请求方式 2)请求地址
+    xhr.open('post','http://localhost:3000/json')
+    var obj= {
+        username:'bao',
+        age:20,
+        aihao:['电影','音乐']
+    }
+    // 声明用那种数据格式
+    xhr.setRequestHeader('Content-Type','application/json')
+        // 发送请求
+        xhr.send(JSON.stringify(obj))
+        //等待响应，获取数据
+        xhr.onload=function(){
+            console.log(JSON.parse(xhr.responseText));
+         
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        ul.children[0].cloneNode();
+        //cloneNode()括号内容为空或flase，为浅拷贝，只克隆标签
+        ul.appendChild(ul.children[0].cloneNode());
+    </script>
+</body>
+
+</html>

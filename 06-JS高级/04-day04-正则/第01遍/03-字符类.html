@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var rg = /[abc]/; //只要包含abc中任何一个字母都为true
+        console.log(rg.test("coloc"));
+        var rg1 = /^[abc]$/; //有且只有一个字母a、b、c才为true
+        var reg = /^[a-z]$/; //取值为a-z，26个英文字母
+        //字符组合
+        var reg1 = /^[a-zA-Z0-9_-]$/; //取值为a-z，26个英文字母
+        console.log(reg1.test('_')); //true
+        console.log(reg1.test('-')); //true
+        console.log(reg1.test('A')); //true
+        console.log(reg1.test('5')); //true
+        console.log(reg1.test('@')); //false
+        var reg2 = /^[^a-zA-Z0-9_-]$/; //中括号里的^符号为取反
+        console.log(reg2.test('_')); //false
+        console.log(reg2.test('-')); //false
+        console.log(reg2.test('A')); //false
+        console.log(reg2.test('5')); //false
+        console.log(reg2.test('@')); //ture
+    </script>
+</body>
+
+</html>

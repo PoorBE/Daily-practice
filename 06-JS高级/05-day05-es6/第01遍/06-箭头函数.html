@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fn = () => {
+            alert(12);
+        }
+        fn();
+        //如果执行条件只有一个，则可省略大括号
+        const fn1 = (sum, n) => sum + n;
+        console.log(fn1(2, 3));
+        //如果形参只有一个则可省略小括号
+        const fn2 = v => {
+            console.log(v);
+        }
+        fn2(6);
+    </script>
+</body>
+
+</html>

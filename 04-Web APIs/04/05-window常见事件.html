@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function() {
+            alert('我也加载完毕了'); //等页面所有内容都加载完才会执行
+        })
+        document.addEventListener('DOMContentLoaded', function() {
+            alert('我加载完毕了') //DOMContentLoaded 是DOM 加载完毕
+        })
+    </script>
+</body>
+
+</html>

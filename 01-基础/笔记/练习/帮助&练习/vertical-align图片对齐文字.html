@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.one {
+			/*默认的是基线对齐*/
+			/*vertical-align: baseline;*/
+			vertical-align: middle;
+			width: 210px;
+			height: 200px;
+		}
+		.two {
+			/*让图片的中线 对齐 文字的中线  垂直居中*/
+			vertical-align: top;
+			width: 210px;
+			height: 200px;
+		}
+		.three {
+			/*让图片的顶线 对齐 文字的顶线 顶部对齐*/
+			vertical-align: top;
+			width: 210px;
+			height: 200px;
+		}
+		
+		/*.four {
+			vertical-align: middle;
+			width: 210px;
+			height: 200px;
+		}*/
+
+		/*这个是自己写的*/
+		/*.spans{
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			border:1px solid red;
+			vertical-align: middle;
+		}*/
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/temp01.jpg" alt="" class="one"> 你瞅啥1 
+		<!-- <span class="spans">我是一个</span> -->
+	</div>
+	<div>
+		<!-- <img src="images/2.jpg" alt="" class="two"> 你瞅啥2  -->
+		<img src="images/temp03.gif" alt="" class="two"> 你瞅啥2 
+	</div>
+	<div>
+		<!-- <img src="images/2.jpg" alt="" class="three"> 你瞅啥3  -->
+		<img src="images/temp07.jpg" alt="" class="three"> 你瞅啥3 
+	</div>
+	<div>
+		<!-- <img src="images/temp04.gif" alt="" class="four"> 你瞅啥4 -->
+	</div>
+</body>
+</html>

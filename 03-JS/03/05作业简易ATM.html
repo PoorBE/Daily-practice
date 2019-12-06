@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var money = 100;
+        do {
+            var num = prompt('请输入你想要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            switch (num) {
+                case '1':
+                    var deposit = parseInt(prompt('请输入您存入的金额'));
+                    if (!deposit) {
+                        deposit = 0;
+                    }
+                    money += deposit;
+                    alert('您的余额为' + money);
+                    break;
+                case '2':
+                    var deposit = parseInt(prompt('请输入您取出的金额'));
+                    if (!deposit) {
+                        deposit = 0;
+                    }
+                    money -= deposit;
+                    alert('您的余额为' + money);
+                    break;
+                case '3':
+
+                    alert('您的余额为' + money);
+                    break;
+
+            }
+        } while (num != 4)
+    </script>
+</body>
+
+</html>

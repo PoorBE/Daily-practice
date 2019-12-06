@@ -1,0 +1,11 @@
+.w {
+	width: 1200px;
+	margin:auto;
+}
+.header {
+	height: 80px;
+	border-bottom: 2px solid #b1191a;
+}
+.logo {
+	padding: 10px 0;
+}

@@ -1,0 +1,7 @@
+div {
+  float: left;
+  width: 200px;
+  height: 2rem;
+  border: 5px solid orange;
+  background-color: #324356;
+}

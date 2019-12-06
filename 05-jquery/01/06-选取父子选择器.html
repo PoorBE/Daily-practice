@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div class="box">
+        <p>123</p>
+        <div class="smbox">
+            <p>123</p>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            console.log($('.son').parent());
+            //找最近的父元素
+            $(".box").children('p').css('color', 'red') //找最亲的儿子
+            $(".box").find('p').css('color', 'blue') //不光儿子，孙子也能找到
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJax入门</title>
+</head>
+<body>
+ 
+    <h2></h2>
+    <script>
+    // 创建阿贾克斯对象
+    var xhr=new XMLHttpRequest()
+    //告诉阿贾克斯请求方式和请求地址
+    // 1).请求方式 2)请求地址
+    xhr.open('get','http://localhost:3000/first')
+        // 发送请求
+        xhr.send()
+        //等待响应，获取数据
+        xhr.onload=function(){
+            console.log(xhr.responseText);
+            var h2=document.querySelector('h2')
+            h2.innerHTML=xhr.responseText
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("div").animate({
+                width: 300,
+                height: 300,
+                opacity: .5,
+                left: 200,
+                top: 200
+            }, 3000)
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

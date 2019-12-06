@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>搜索框输入文字自动提示</title>
+	<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+	    html,body{
+			height:100%;
+			overflow: hidden;
+		}
+		.container {
+			padding-top: 150px;
+		}
+
+		.list-group {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="请输入搜索关键字" id="search">
+			<ul class="list-group" id="list-box">
+				
+			</ul>
+		</div>
+	</div>
+	<script src="/js/ajax.js"></script>
+	<script src="/js/template-web.js"></script>
+	<script type="text/html" id="tpl"> 
+		{{each list}}
+		<li class="list-group-item">{{$value}}</li>
+		{{/each}}
+	</script>
+	<script>
+		// 获取搜索框
+		var searchInp = document.getElementById('search');
+		// 获取提示文字的存放容器
+		var listBox = document.getElementById('list-box');
+		//定一个定时器变量
+		var timer=null;
+		searchInp.oninput=function () {
+			//获取输入框中的值
+			var key=this.value
+			//清除上一次的定时器
+			clearTimeout(timer)
+			// 判断输入框内容，没有则清空ul
+			if(key.trim()=='') {
+				listbox.innerHTML=''
+				return //阻止程序向下执行
+			}
+			//定义一个定时器，从用户输入开始0.8s后向服务器发送请求
+			timer= setTimeout(function(){
+				ajax({
+				url:'http://localhost:3000/searchAutoPrompt',
+				data: {
+					key
+				},
+				success:function(res) {
+					//把res包装作为对象的一个属性 属性名是list 属性值是res
+					var html=template('tpl',{list:res})
+					listBox.innerHTML=html
+					listBox.style.display='block'
+				}
+			})
+			},800)
+		}
+		
+	</script>
+</body>
+
+</html>

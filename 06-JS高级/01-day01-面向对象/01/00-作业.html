@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor(money, cars, company) {
+                this.money = money;
+                this.cars = cars;
+                this.company = company;
+            }
+            manage() {
+                console.log("管理公司");
+
+            }
+        }
+        class Son extends Father {
+            constructor(money, cars, company) {
+                super(money, cars, company)
+            }
+        }
+        var son = new Son(1, 2, 3)
+        console.log(son);
+        son.manage()
+    </script>
+</body>
+
+</html>

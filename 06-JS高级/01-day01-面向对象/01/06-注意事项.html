@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        var that; //定义一个全局变量
+        class Star {
+            constructor(uname, age) {
+                //属性里的this指向实例对象
+                that = this; //将实例对象给自定的对象
+                this.uname = uname;
+                this.age = age;
+                // this.sing()
+                this.btn = document.querySelector("button");
+                this.btn.onclick = this.sing;
+
+            }
+            sing() {
+                //方法里的this指向调用者
+                console.log(this.uname); //这里面的this指向的是btn 因为btn调用了这个函数
+                console.log(that.uname); //这里的that是实例对象ldh
+
+            }
+        }
+        var ldh = new Star("刘德华")
+    </script>
+</body>
+
+</html>

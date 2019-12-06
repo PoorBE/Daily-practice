@@ -1,0 +1,26 @@
+
+green		绿色		purple		紫色 
+
+yellow		黄色		red		红色
+
+pink  		粉红色		salmon pink  	橙红色
+
+brown  		褐色, 茶色	beige  		灰褐色
+
+green  		绿色		blue  		蓝色
+
+red  		红色		mauve  		紫红
+
+purple		紫色		lavender  	淡紫色
+
+lilac  		浅紫色		antique violet  古紫色
+
+white  		白色		off-white  	灰白色
+
+ivory  		象牙色		snowy white  	雪白色
+
+gray  		灰色		powderblue 	粉蓝色
+
+purple 		紫色		turquoise 	青绿色
+
+pink 		粉红 

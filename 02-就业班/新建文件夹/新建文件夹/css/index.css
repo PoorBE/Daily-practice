@@ -1,0 +1,84 @@
+header {
+    position: relative;
+    height: 44px;
+    background-color: #0092D8;
+}
+
+@ .logo {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 60px;
+    height: 21px;
+    background: url(../images/index_sprite.png) -20px -254px;
+}
+
+.nav {
+    position: absolute;
+    top: 13px;
+    left: 137px;
+    font-size: 12px;
+}
+
+.nav a {
+    padding: 0 25px;
+    color: #ccc;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.user {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.user li {
+    float: left;
+    height: 44px;
+    line-height: 44px;
+    background: url(../images/index_sprite.png);
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.user li:first-child {
+    /* /* width: 17px; */
+    height: 17px;
+    background-position: -97px -216px;
+}
+
+.user li:nth-child(2n) {
+    /* width: 11px;
+    height: 18px; */
+    background-position: -124px -216px;
+}
+
+.user li:nth-child(3n) {
+    /* width: 20px;
+    height: 17px; */
+    background-position: -146px -216px;
+}
+
+.user li:last-child {
+    /* width: 20px;
+    height: 16px; */
+    background-position: -38px -217px;
+}
+
+.user li:last-child p {
+    position: absolute;
+    top: 1px;
+    right: -34px;
+    width: 60px;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+/* .search {
+    width: 250px;
+    height: 44px;
+} */

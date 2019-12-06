@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            say() {
+                return '我是父亲'
+            }
+        }
+        class Son extends Father {
+            say() {
+                console.log(super.say() + '的儿子'); //儿子的方法里有父亲的方法
+
+            }
+        }
+        var son = new Son() //创建实例对象
+        son.say() //调用构造函数里的方法
+    </script>
+</body>
+
+</html>

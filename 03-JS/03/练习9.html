@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //whlie循环重写小明的成绩，如果用户输入不合法就反复输入，知道正确为止
+        while (true) {
+            var score = parseInt(prompt('请输入小明的成绩'));
+            if (score < 0 || score > 100 || !score) {
+                alert('非法字符，请重新输入！');
+            } else if (score == 100) {
+                alert("翻滚吧！")
+                break;
+            } else if (score >= 81) {
+                alert('奖励手机');
+                break;
+            } else if (score >= 60) {
+                alert('奖励宝马车')
+                break;
+            } else if (score <= 59) {
+                alert('奖励别墅一栋')
+                break;
+            } else {
+                break;
+            }
+
+
+        }
+        // !+score || (+score * 10 % 5 != 0) || +score > 100 || +score < 0
+    </script>
+</body>
+
+</html>

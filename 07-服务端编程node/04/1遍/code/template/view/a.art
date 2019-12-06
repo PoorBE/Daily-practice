@@ -1,0 +1,26 @@
+
+<!-- 继承layout.art -->
+{{extend './common/layout.art'}} 
+
+
+{{block 'style'}} 
+    <style>
+        body{
+        background:blue;
+        }
+    </style>
+{{/block}}
+   
+    
+{{block 'main'}}
+{{dateformat(time,'yyyy年mm月dd日')}}
+{{include './common/header.art'}}
+<main>我是a页面的主体内容</main>
+{{include './common/footer.art'}}
+{{/block}}
+
+ {{block 'script'}}
+        <script>
+            console.log('我是a页面的js代码')
+        </script>
+ {{/block}}

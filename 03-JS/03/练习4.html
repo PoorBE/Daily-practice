@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //某侦察队接到一项紧急任务，要求在A、B、C、D、E、F六个队员中尽可能多地挑若干人，但有以下限制条件：<br />
+        // ●
+        // A和B两人中至少去一人；● A和D不能一起去；● A、 E和F三人中要派两人去；● B和C都去或都不去；● C和D两人中去一个；● 若D不去， 则E也不去。
+        // 问应当让哪几个人去？
+        for (var a = 0; a <= 1; a++) {
+            for (var b = 0; b <= 1; b++) {
+                for (var c = 0; c <= 1; c++) {
+                    for (var d = 0; d <= 1; d++) {
+                        for (var e = 0; e <= 1; e++) {
+                            for (var f = 0; f <= 1; f++) {
+                                //根据上面列出的条件,全都加到判断中,符合条件的就是最终的结果
+                                if (a + b >= 1 && a + d != 2 && a + e + f == 2 && b == c && c + d == 1 && (d + e == 0 || d == 1)) {
+                                    document.write('a=' + a + '<br />b=' + b + '<br />c=' + c + '<br />d=' + d + '<br />e=' + e + '<br />f=' + f);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

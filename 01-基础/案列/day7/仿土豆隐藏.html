@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			position: relative;
+			height: 436px;
+			width: 348px;
+			margin:100px auto;
+		}
+		.one {
+			position: absolute;
+			display: none;
+			top: 0;
+			left: 0;
+			height: 436px;
+			width: 348px;
+			background: rgba(0, 0, 0, 0.3) url(images/arr.png) no-repeat center center;
+		}
+		.box a:hover .one {
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="#">
+			<div class="one"></div>
+			<div class="two"><img src="images/temp03.gif" alt=""></div>
+		</a>
+	</div>
+</body>
+</html>

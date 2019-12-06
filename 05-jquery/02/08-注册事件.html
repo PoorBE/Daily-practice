@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        
+        .current {
+            background-color: purple;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("div").on({
+                mouseover: function() {
+                    $(this).css("background", "pink")
+
+                },
+                mouseout: function() {
+                    $(this).css("background", "green")
+
+                }
+            })
+            $("div").on("mouseover, mouseout", function() {
+                $(this).toggleClass("current")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

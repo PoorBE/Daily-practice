@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //const必须赋值，且不能重新赋值
+        // const pi;
+        // console.log(pi);//报错
+
+        const arr = [12, 55];
+        arr[0] = 'abc';
+        arr[1] = '去去去';
+        console.log(arr); //['abc','去去去']
+        arr = [111, 222];
+        console.log(arr); //报错
+    </script>
+</body>
+
+</html>

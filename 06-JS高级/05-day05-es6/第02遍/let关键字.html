@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //let声明变量不能声明第二次
+        // let a = 1;
+        // let a = 2;
+        // console.log(a); //报错
+
+
+        //let声明的变量只在所处在的块级有效
+        // if (true) {
+        //     let b = 2;
+        //     console.log(b); //2
+        // }
+        // console.log(b); //报错
+
+
+        //不存在变量提升
+        // console.log(a);
+        // let a = 1;
+
+
+        // //暂时性死区
+        // var tmp = 123;
+        // if (true) {
+        //     tmp = 'abc';
+        //     let tmp;
+        //     console.log(tem); //自己没有也不会去找外面
+        // }
+
+
+
+        //经典面试题
+        var arr = [];
+        for (var i = 0; i < 2; i++) {
+            arr[i] = function() {
+                console.log(i);
+            }
+        }
+        arr[0](); //2
+        arr[1](); //2
+        //此题的关键点在于变量i是全局的，函数执行时输出的都是全局作用域下的i值。
+        for (let i = 0; i < 2; i++) {
+            arr[i] = function() {
+                console.log(i);
+            }
+        }
+        arr[0](); //0
+        arr[1](); //1
+        //此题的关键点在于每次循环都会产生一个块级作用域，每个块级作用域中的变量都是不同的，函数执行时输出的是自己上一级（循环产生的块级作用域）作用域下的i值.
+
+
+        //let变量的特点
+        //- let关键字就是用来声明变量的
+        // 使用let关键字声明的变量具有块级作用域
+        // 在一个大括号中 使用let关键字声明的变量才具有块级作用域 var关键字是不具备这个特点的 -
+        // 防止循环变量变成全局变量 -
+        // 使用let关键字声明的变量没有变量提升 -
+        // 使用let关键字声明的变量具有暂时性死区特性
+    </script>
+</body>
+
+</html>

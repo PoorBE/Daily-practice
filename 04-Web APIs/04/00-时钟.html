@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        getTime();
+        setInterval(getTime, 1000);
+
+        function getTime() {
+            var date = new Date;
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var days = date.getDay();
+            var hour = date.getHours();
+            hour = hour < 10 ? '0' + hour : hour;
+            var minute = date.getMinutes();
+            minute = minute < 10 ? '0' + minute : minute;
+            var second = date.getSeconds();
+            second = second < 10 ? '0' + second : second;
+            div.innerHTML = '今天是' + year + '年' + month + '月' + day + '日' + arr[days] + hour + '时' + minute + '分' + second + '秒';
+
+        }
+    </script>
+</body>
+
+</html>

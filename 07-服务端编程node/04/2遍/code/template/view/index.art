@@ -1,0 +1,24 @@
+
+
+{{extend '../common/layour.art'}}
+
+{{block 'style'}} 
+<style>
+    /* 首页的样式 */
+    h1{
+      color: red;
+    }
+  </style>
+{{/block}}
+
+{{block 'main'}} 
+<div class="main">
+    <h1>首页</h1>
+  </div>
+{{/block}}
+{{block 'script'}} 
+<script>
+    console.log('我是首页面的js代码')
+  </script>
+{{/block}}
+

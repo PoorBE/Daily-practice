@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //时间默认为毫秒，不写则立即执行
+        setTimeout(function() {
+            console.log('我弹出来了');
+
+        }, 2000)
+
+        function time() {
+            console.log('我也弹出来了');
+        }
+        setTimeout(time, 3000);
+        setTimeout(time, 4000);
+    </script>
+</body>
+
+</html>

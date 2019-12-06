@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        // document.write(getRandom(1, 10));
+        var arr = ['张崇超', '韩浩东', '张建禄', '汤志远', '任全计', '姚丹', '杜明洋', '赵仁杰'];
+        document.write(arr[getRandom(0, arr.length - 1)]);
+        document.write('喜欢');
+        document.write(arr[getRandom(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数组解构
+        let arr = ['张崇超', '韩浩东'];
+        let [a, b, c] = arr;
+        console.log(a, b, c); //变量大于数值，多的变量为undefined，
+
+
+        //对象解构
+        let person = {
+            name: '汤志远',
+            age: 22
+        };
+        let {
+            name,
+            age
+        } = person;
+        console.log(name, age);
+
+        let {
+            name: myname,
+            age: myage
+        } = person;
+        console.log(myname, myage);
+    </script>
+</body>
+
+</html>

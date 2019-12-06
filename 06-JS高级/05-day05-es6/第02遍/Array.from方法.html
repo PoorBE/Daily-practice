@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //定义一个集合
+        let likearr = {
+                '0': '2',
+                '1': '4',
+                '2': '5',
+                'length': 3
+            }
+            //转成数组
+        let arr = Array.from(likearr);
+        console.log(arr);
+        //乘2
+        let arr1 = Array.from(likearr, item => item * 2);
+        console.log(arr1);
+    </script>
+</body>
+
+</html>

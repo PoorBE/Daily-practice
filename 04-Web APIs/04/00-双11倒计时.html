@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .zi {
+            height: 50px;
+            font-size: 40px;
+            color: black;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 700;
+            margin: 100px;
+        }
+        
+        .box {
+            width: 500px;
+            height: 50px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        li {
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            font-size: 40px;
+            font-weight: 700;
+            list-style: none;
+            margin: 10px;
+            padding: 5px;
+            color: #fff;
+            border-radius: 10px;
+            background-color: #FFA500;
+        }
+        
+        li:nth-child(1) {
+            background-color: #fff;
+            color: #FFA500;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="zi">距光棍节，还有</div>
+    <div class="box">
+        <ul>
+            <li class="d"></li>
+            <li class="h"></li>
+            <li class="m"></li>
+            <li class="s"></li>
+        </ul>
+    </div>
+    <script>
+        var day = document.querySelector('.d');
+        var hour = document.querySelector('.h');
+        var minute = document.querySelector('.m');
+        var second = document.querySelector('.s')
+        getTime();
+        setInterval(getTime, 1000);
+
+        function getTime() {
+            var nowTime = +new Date();
+            var inputTime = +new Date('2019-11-11');
+            var times = (inputTime - nowTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24);
+            d = d < 10 ? '0' + d : d;
+            day.innerHTML = d + '天';
+            var h = parseInt(times / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h + '时';
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m + '分';
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s + '秒';
+        }
+    </script>
+</body>
+
+</html>

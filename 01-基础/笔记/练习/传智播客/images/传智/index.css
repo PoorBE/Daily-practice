@@ -1,0 +1,331 @@
+.toubu {
+	height: 40px;
+	background-color: #055c92;
+}
+.toubu .toubu1 .a {
+	line-height: 40px;
+}
+.toubu .toubu1 .a li {
+	color: #fff;
+}
+.toubu .toubu1 .toubu2 {
+	line-height: 40px;
+}
+.toubu .toubu1 .toubu2 li {
+	color: #fff;
+}
+.toubu .toubu1 .toubu2 .b {
+	margin-left:12px;
+}
+/*头部结束*/
+/*项目1开始*/
+.xm1 .xm1a {
+	margin-top: 38px;
+}
+.xm1 .xm1b {
+	margin-left: 70px;
+}
+.xm1 .xm1b li {
+	margin-top: 49px;
+	font-size: 16px;
+	margin-right: 30px;
+}
+/*项目1结束*/
+/*项目2开始*/
+.xm2 .xm2a {
+	background: url(../20164108084109414.jpg);
+	height: 400px;
+	width: 958px;
+	margin-top: 37px;
+	float:  ;
+}
+.xm2 .xm2a .xm2b {
+	width: 232px;
+	height: 400px;
+	background: rgba(0,0,0,0.4);
+	padding: 32px 40px;
+	box-sizing: border-box;
+}
+.xm2 .xm2a .xm2b li {
+	margin-bottom: 15px;
+}
+.xm2 .xm2a .xm2b li a {
+	color: #fff;
+}
+.xm2 .xm2a .xm2b li span {
+	float: right;
+}
+.xm2  .xm2c {
+	 width: 230px;
+	 height: 399px;
+	 margin-top: 37px;
+	 border: 1px solid #ccc;
+	 box-sizing: border-box;
+}
+.xm2 .xm2c .xm2d {
+	height: 45px;
+	background-color: #055c92;
+	text-align: center;
+}
+.xm2 .xm2c .xm2d h3 {
+	line-height: 45px;
+	color: #fff;
+}
+.xm2 .xm2c .xm2e {
+	background-color: #f9f9f9;
+	padding: 28px 13px 2px 8px;
+	border-bottom: 1px solid #ccc;
+}
+.xm2 .xm2c .xm2e li {
+	margin-bottom: 18px;
+}
+.xm2 .xm2c .xm2e a {
+	font-size: 13px;	
+}
+/*项目2结束*/
+/*项目3开始*/
+.xm3 {
+	height: 102px;
+	position: relative;
+}
+.xm3 .xm3a h2 {
+	position: absolute;
+	bottom: 15px;
+	font-size: 24px;
+}
+.xm3 .xm3b {
+	position: absolute;
+	bottom: 25px;
+	right: 0;
+}
+.xm3 .xm3b .a {
+	color: #5799e9;
+}
+/*项目3结束*/
+/*项目4开始*/
+.xm4 .xm4a {
+	border: 1px solid #ccc;
+	position: relative;
+	height: 193px;
+	width: 230px;
+	margin-left: 8px;
+}
+.xm4 .xm4a .xm4a1 {
+	position: absolute;
+	width: 230px;
+	height: 20px;
+	background: rgba(0,0,0,0.3);
+	top: 99px;
+}
+.xm4 .xm4a .xm4a1 p {
+	line-height: 20px;
+	color: #fff;
+	font-size: 12px;
+	margin-left: 10px;
+}
+.xm4 .xm4a .xm4a2 {
+	padding: 16px 7px 12px 13px;
+	box-sizing: border-box;
+}
+.xm4 .xm4a .xm4a2 p {
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.xm4 .xm4a .xm4a2 i {
+	position: absolute;
+	font-size: 10px;
+	bottom: 12px;
+	left: 13px;
+}
+.xm4 .xm4a .xm4a2 .xm4a3 {
+	position: absolute;
+	width: 60px;
+	height: 18px;
+	border: 1px solid red;
+	border-radius: 4px;
+	right: 7px;
+	bottom: 12px; 
+	text-align: center;
+}
+.xm4 .xm4a .xm4a2 .xm4a3 a {
+	line-height: 18px;
+	font-size: 10px;
+	color: red;
+}
+/*项目4结束*/
+/*项目5开始*/
+.xm5 {
+	height: 70px;
+	position: relative;
+}
+.xm5 .xm3a h2 {
+	position: absolute;
+	bottom: 15px;
+	font-size: 24px;
+}
+.xm5 .xm3b {
+	position: absolute;
+	bottom: 25px;
+	right: 0;
+}
+.xm5 .xm3b .a {
+	color: #5799e9;
+}
+/*项目5结束*/
+/*项目6开始*/
+.xm6 .xm6a {
+	width: 288px;
+	height: 218px;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 10px;
+}
+.xm6 .xm6a .xm6a1 {
+	height: 55px;
+	text-align: center;
+}
+.xm6 .xm6a .xm6a1 p {
+	line-height: 55px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*项目6结束*/
+/*项目7开始*/
+.xm7 {
+	height: 105px;
+	position: relative;
+}
+.xm7 .xm3a h2 {
+	position: absolute;
+	bottom: 15px;
+	font-size: 24px;
+}
+.xm7 .xm3b {
+	position: absolute;
+	bottom: 25px;
+	right: 0;
+}
+.xm7 .xm3b .a {
+	color: #5799e9;
+}
+/*项目7结束*/
+/*项目9开始*/
+.xm9 {
+	margin-top: 40px;
+	background-color: #f3f3f3;
+}
+.xm9 .xm9a {
+	height: 115px;
+	padding: 40px;
+	box-sizing: border-box;
+}
+.xm9 .xm9a  li  {
+	margin-top: 16px;
+	height: 15px;
+	line-height: 20px;
+	margin-left: 45px;
+}
+.xm9 .xm9a  li span {
+	margin-left: 45px;
+}
+/*项目9结束*/
+/*项目10开始*/
+.xm10 {
+	height: 161px;
+	border-bottom: 1px solid #ccc;
+}
+.xm10 .xm10a {
+	margin-top: 30px;
+	margin-right: 116px;
+	box-sizing: border-box;
+}
+.xm10 .xm10a h4 {
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+.xm10 .xm10a li {
+	margin-bottom: 4px;
+}
+.xm10 .xm10a li a {
+	font-size: 14px;
+	color: #bbb;
+}
+/*项目10结束*/
+/*项目11开始*/
+.xm11 {
+	height: 138px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+}
+.xm11 h4 {
+	font-size: 16px;
+	margin-top: 28px;
+}
+.xm11 li {
+	margin-right: 4px;
+}
+.xm11 a {
+	font-size: 12px;
+	color: #ccc;
+}
+/*项目11结束*/
+/*页尾开始*/
+.yw {
+	height: 118px;
+	box-sizing: border-box;
+}
+.yw .yw1 {
+	margin-right: 20px;
+}
+.yw .yw2 {
+	margin-top: 37px;
+}
+.yw .yw2 p {
+	float: left;
+	font-size: 14px;
+}
+
+/*页尾结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
